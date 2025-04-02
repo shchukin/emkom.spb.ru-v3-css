@@ -1,0 +1,236 @@
+.project {
+    padding-top: 3px;
+    padding-bottom: var(--bottom-padding);
+}
+    .project__preview {
+        height: 416px;
+    }
+        .project__image {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: var(--image-fallback);
+        }
+
+
+    .project__summary {
+        padding-top: 20px;
+        padding-bottom: 36px;
+        background-color: #EBEBEB;
+        color: var(--seriy-text);
+    }
+        .project__summary-wrap {
+
+        }
+            .project__summary-limitation {
+
+            }
+                .project__date {
+                    display: block;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #666666;
+                    text-decoration: none;
+                }
+
+                .project__heading {
+                    margin-top: 7px;
+                    margin-bottom: 0;
+                }
+
+                .project__short-description {
+                    margin-top: 18px;
+                    font-size: 17px;
+                    line-height: 27px;
+                }
+
+                .project__data {
+                    margin-top: 22px;
+                }
+                    .project__stat {
+                        margin-top: 25px;
+                    }
+
+                    .project__stat:first-child {
+                        margin-top: 0;
+                    }
+                        .project__param {
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 25px;
+                            text-transform: uppercase;
+                        }
+
+                        .project__value {
+                            margin-top: 2px;
+                            font-size: 17px;
+                            line-height: 27px;
+                        }
+
+    .project__body {
+
+    }
+        .project__wrap {
+            padding-top: 42px;
+            padding-bottom: 72px;
+        }
+
+        .project__gallery {
+
+        }
+            .project__gallery-item {
+
+            }
+
+
+
+@media (1850px <= width) {
+
+    .project {
+        /*padding-top: 3px;*/
+        /*padding-bottom: var(--bottom-padding);*/
+    }
+        .project__preview {
+            height: 538px;
+        }
+            .project__image {
+                /*vertical-align: top;*/
+                /*width: 100%;*/
+                /*height: 100%;*/
+                /*object-fit: cover;*/
+            }
+
+
+        .project__summary {
+            padding-top: 28px;
+            padding-bottom: 42px;
+        }
+            .project__summary-wrap {
+
+            }
+                .project__summary-limitation {
+
+                }
+                    .project__date {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+
+                    .project__heading {
+                        margin-top: 10px;
+                    }
+
+                    .project__short-description {
+                        margin-top: 22px;
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
+
+                    .project__data {
+                        margin-top: 28px;
+                    }
+                        .project__stat {
+                            margin-top: 28px;
+                        }
+                            .project__param {
+                                font-size: 20px;
+                                line-height: 27px;
+                            }
+
+                            .project__value {
+                                font-size: 20px;
+                                line-height: 25px;
+                            }
+
+        .project__body {
+
+        }
+            .project__wrap {
+                padding-top: 36px;
+                padding-bottom: 64px;
+            }
+
+            .project__gallery {
+
+            }
+                .project__gallery-item {
+
+                }
+}
+
+
+
+@media (width < 740px) {
+
+    .project {
+        overflow: hidden; /* обрезаем карусель */
+    }
+        .project__preview {
+            height: 276px;
+        }
+            .project__image {
+                /*vertical-align: top;*/
+                /*width: 100%;*/
+                /*height: 100%;*/
+                /*object-fit: cover;*/
+            }
+
+
+        .project__summary {
+            padding-top: 22px;
+            padding-bottom: 24px;
+            /*background-color: #DFF3FF;*/
+        }
+            .project__summary-wrap {
+
+            }
+                .project__summary-limitation {
+
+                }
+                    .project__date {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    .project__heading {
+                        margin-top: 0;
+                    }
+
+                    .project__short-description {
+                        margin-top: 13px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    .project__data {
+                        margin-top: 12px;
+                    }
+                        .project__stat {
+                            margin-top: 17px;
+                        }
+                            .project__param {
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+
+                            .project__value {
+                                margin-top: 0;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+
+        .project__body {
+
+        }
+            .project__wrap {
+                padding-bottom: 0;
+            }
+
+            .project__gallery {
+                margin-top: 32px;
+            }
+}
+

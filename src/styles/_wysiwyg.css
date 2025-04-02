@@ -1,0 +1,180 @@
+.wysiwyg {
+    overflow-wrap: break-word;
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+}
+
+.wysiwyg p,
+.wysiwyg ul,
+.wysiwyg ol,
+.wysiwyg hr,
+.wysiwyg figure,
+.wysiwyg blockquote {
+    margin-top: var(--body-line-height);
+    margin-bottom: var(--body-line-height);
+}
+
+.wysiwyg p:first-child,
+.wysiwyg ul:first-child,
+.wysiwyg ol:first-child,
+.wysiwyg hr:first-child,
+.wysiwyg figure:first-child,
+.wysiwyg blockquote:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg p:last-child,
+.wysiwyg ul:last-child,
+.wysiwyg ol:last-child,
+.wysiwyg hr:last-child,
+.wysiwyg figure:last-child,
+.wysiwyg blockquote:last-child {
+    margin-bottom: 0;
+}
+
+
+.wysiwyg h2 {
+    margin-top: calc(2 * var(--body-line-height));
+    margin-bottom: var(--body-line-height);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+@media (1850px <= width) {
+
+    .wysiwyg h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media (width < 740px) {
+
+    .wysiwyg h2 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+
+.wysiwyg h3 {
+    margin-top: calc(2 * var(--body-line-height));
+    margin-bottom: var(--body-line-height);
+    font-weight: 600;
+    font-size: calc(var(--body-font-size) + 2px);
+    line-height: calc(var(--body-line-height) + 3px);
+    text-transform: uppercase;
+}
+
+.wysiwyg h4 {
+    font-weight: 600;
+}
+
+.wysiwyg h2:first-child,
+.wysiwyg h3:first-child,
+.wysiwyg h4:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg h2:last-child,
+.wysiwyg h3:last-child,
+.wysiwyg h4:last-child {
+    margin-bottom: 0;
+}
+
+
+.wysiwyg ul,
+.wysiwyg ol {
+
+}
+    .wysiwyg li {
+        margin-top: 0.5em;
+    }
+
+    .wysiwyg li:first-child {
+        margin-top: 0;
+    }
+
+.wysiwyg ul {
+    list-style: none;
+    padding-left: 0;
+}
+    .wysiwyg ul li {
+        position: relative;
+        padding-left: 20px;
+    }
+        .wysiwyg ul li::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 13px;
+            width: 5px;
+            height: 5px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+
+        @media (width < 740px) {
+            .wysiwyg ul li::before {
+                left: 6px;
+                top: 11px;
+                width: 4px;
+                height: 4px;
+            }
+        }
+
+
+/* Если карусель втсавили напрямую из редактора: */
+.wysiwyg .carousel {
+    margin-top: var(--body-line-height);
+    margin-bottom: var(--body-line-height);
+}
+
+.wysiwyg .carousel:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg .carousel:last-child {
+    margin-bottom: 0;
+}
+
+/* Ещё очень может быть кейс, что сам .wysiwyg внутри .inner-container из редактора: */
+@media (740px <= width < 1850px) {
+
+    .inner-container .wysiwyg .carousel {
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+}
+
+@media (1850px <= width) {
+
+    .inner-container .wysiwyg .carousel {
+        margin-left: -282px;
+        margin-right: -282px;
+    }
+}
+
+
+.wysiwyg img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.wysiwyg a {
+    /* See .link component */
+}
+
+
+
+
+.wysiwyg strong,
+.wysiwyg b {
+    font-weight: 600;
+}
+
+
+

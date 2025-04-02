@@ -1,0 +1,917 @@
+.carousel {
+
+}
+
+/* Довольно запарно выключать слайдер на десктопах скриптом.
+   Проще перебить пару стилей:
+ */
+.carousel--css-disable-on-desktop {
+
+}
+
+@media (740px <= width) {
+
+    .carousel--css-disable-on-desktop {
+
+    }
+        .carousel--css-disable-on-desktop .carousel__widget .swiper {
+            overflow: visible;
+        }
+            .carousel--css-disable-on-desktop .carousel__widget .swiper-wrapper {
+                height: auto !important;
+                transform: none !important;
+            }
+                .carousel--css-disable-on-desktop .swiper-slide {
+                    width: auto !important;
+                    margin: 0 !important;
+                }
+
+        .carousel--css-disable-on-desktop .carousel__pagination {
+            display: none;
+        }
+
+        .carousel--css-disable-on-desktop .carousel__button {
+            display: none !important;
+        }
+}
+
+
+
+
+/* Default bullets */
+
+@media (740px <= width) {
+
+    .carousel__pagination {
+        display: none;
+    }
+}
+
+@media (width < 740px) {
+
+    .carousel--css-default-bullets .carousel__pagination {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* На случай типа fraction: */
+        font-size: 15px;
+        line-height: 20px;
+        color: currentColor;
+        text-align: center;
+    }
+        .carousel--css-default-bullets .carousel__bullet {
+            flex-shrink: 0;
+            width: 28px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+            .carousel--css-default-bullets .carousel__bullet::after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #666666;
+            }
+
+            .carousel--css-default-bullets .carousel__bullet--current::after {
+                background-color: currentColor;
+            }
+
+    .carousel--css-default-bullets.carousel--not-enough-slides .carousel__pagination {
+        display: none;
+    }
+}
+
+
+
+/* Default arrows */
+
+.carousel--css-default-arrow {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+    .carousel--css-default-arrow .carousel__widget {
+
+    }
+        .carousel--css-default-arrow .swiper {
+
+        }
+            .carousel--css-default-arrow .swiper-wrapper {
+
+            }
+
+    .carousel--css-default-arrow .carousel__button {
+        position: absolute;
+        top: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: -35px; /* или: margin-top: calc(-35px - 19px); 19px высота точек */
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color var(--transition-hover);
+    }
+
+    .carousel--css-default-arrow .carousel__button:hover {
+        background-color: rgb(0 104 179 / 10%);
+        color: #0D25FF;
+    }
+
+    .carousel--css-default-arrow .carousel__button--disabled,
+    .carousel--css-default-arrow .carousel__button--disabled:hover {
+        background-color: transparent;
+        cursor: default;
+        transition: none;
+        opacity: 20%;
+    }
+
+    .carousel--css-default-arrow .carousel__button--prev {
+        left: 0;
+    }
+
+    .carousel--css-default-arrow .carousel__button--next {
+        right: 0;
+    }
+        .carousel--css-default-arrow .carousel__chevron {
+            vertical-align: top;
+            fill: var(--siniy1);
+        }
+
+
+
+.carousel--css-default-arrow.carousel--not-enough-slides .carousel__button {
+    display: none;
+}
+
+
+@media (1850px <= width) {
+
+    .carousel--css-default-arrow {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+        .carousel--css-default-arrow .carousel__button--prev {
+            left: -74px;
+        }
+
+        .carousel--css-default-arrow .carousel__button--next {
+            right: -74px;
+        }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-default-arrow {
+        padding-left: 0;
+        padding-right: 0;
+    }
+        .carousel--css-default-arrow .carousel__button {
+            display: none;
+        }
+}
+
+
+
+
+/* Full Portfolio on desktop */
+
+.carousel--css-skin-full-portfolio {
+
+}
+
+@media (740px <= width) {
+
+    .carousel--css-skin-full-portfolio .carousel {
+
+    }
+        .carousel--css-skin-full-portfolio .carousel__widget {
+
+        }
+            .carousel--css-skin-full-portfolio .carousel__widget .swiper {
+
+            }
+                .carousel--css-skin-full-portfolio .carousel__widget .swiper-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(6, 168px); /* Default to 3 items per row */
+                    gap: 0 14px;
+                    justify-content: center;
+                    padding-top: 88px;
+                }
+                    .carousel--css-skin-full-portfolio .swiper-slide {
+                        display: flex;
+                        margin-top: -88px !important;
+                        pointer-events: none; /* когда наезжаем на гексагон сверху */
+                    }
+
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+1),
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+2),
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+3) {
+                        grid-column: span 2;
+                    }
+
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4),
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5) {
+                        grid-column: span 3;
+                    }
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4)::before,
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5)::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            display: block;
+                            width: 350px;
+                            height: 403px;
+                            background-image: url("../vectors/construction-laptop-frame.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            pointer-events: none;
+                        }
+
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4) {
+                        justify-content: flex-end;
+                    }
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4)::before {
+                            right: 364px;
+                        }
+
+                    .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5) {
+                        justify-content: flex-start;
+                    }
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5)::before {
+                            left: 364px;
+                        }
+
+    .carousel--css-skin-full-portfolio .carousel__pagination {
+        display: none;
+    }
+
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-full-portfolio .carousel {
+
+        }
+            .carousel--css-skin-full-portfolio .carousel__widget {
+
+            }
+                .carousel--css-skin-full-portfolio .carousel__widget .swiper {
+
+                }
+                    .carousel--css-skin-full-portfolio .carousel__widget .swiper-wrapper {
+                        grid-template-columns: repeat(6, 176px); /* Default to 3 items per row */
+                        gap: 0 14px;
+                        padding-top: 93px;
+                    }
+                        .carousel--css-skin-full-portfolio .swiper-slide {
+                            margin-top: -93px !important;
+                        }
+                            .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4)::before,
+                            .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5)::before {
+                                width: 360px;
+                                height: 422px;
+                                background-image: url("../vectors/construction-monitor-frame.svg");
+                            }
+
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4) {
+
+                        }
+                            .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+4)::before {
+                                right: 380px;
+                            }
+
+                        .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5) {
+
+                        }
+                            .carousel--css-skin-full-portfolio .swiper-slide:nth-child(5n+5)::before {
+                                left: 380px;
+                            }
+
+        .carousel--css-skin-full-portfolio .carousel__pagination {
+
+        }
+    }
+}
+
+@media (width < 740px) {
+
+    .carousel--css-skin-full-portfolio .carousel {
+
+    }
+        .carousel--css-skin-full-portfolio .carousel__widget {
+
+        }
+            .carousel--css-skin-full-portfolio .carousel__widget .swiper {
+                overflow: visible; /* будем обрезать парой уровней выше, у границ экрана, а не контейнера */
+            }
+                .carousel--css-skin-full-portfolio .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-full-portfolio .swiper-slide {
+
+                    }
+                        .carousel--css-skin-full-portfolio .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                        }
+}
+
+
+
+
+/* Short portfolio on desktop */
+
+.carousel--css-skin-short-portfolio {
+
+}
+
+@media (740px <= width) {
+
+    .carousel--css-skin-short-portfolio .carousel {
+
+    }
+        .carousel--css-skin-short-portfolio .carousel__widget {
+
+        }
+            .carousel--css-skin-short-portfolio .carousel__widget .swiper {
+
+            }
+                .carousel--css-skin-short-portfolio .carousel__widget .swiper-wrapper {
+                    width: auto !important;
+                    height: 442px !important;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                    .carousel--css-skin-short-portfolio .swiper-slide {
+                        position: absolute;
+                        pointer-events: none; /* чтобы не наезжал на соседний гексагон уголками */
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--01 {
+                        left: 84px;
+                        top: 0;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--02 {
+                        left: 279px;
+                        top: 112px;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--03 {
+                        left: 474px;
+                        top: 0;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--04 {
+                        left: 474px;
+                        top: 224px;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--05 {
+                        left: 669px;
+                        top: 112px;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--06 {
+                        left: 864px;
+                        top: 0;
+                    }
+
+                    .carousel--css-skin-short-portfolio .swiper-slide--07 {
+                        left: 84px;
+                        top: 224px;
+                    }
+
+    .carousel--css-skin-short-portfolio .carousel__pagination {
+        display: none;
+    }
+
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-short-portfolio .carousel {
+
+        }
+            .carousel--css-skin-short-portfolio .carousel__widget {
+
+            }
+                .carousel--css-skin-short-portfolio .carousel__widget .swiper {
+
+                }
+                    .carousel--css-skin-short-portfolio .carousel__widget .swiper-wrapper {
+                        height: 600px !important;
+                    }
+                        .carousel--css-skin-short-portfolio .swiper-slide {
+
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--01 {
+                            left: 142px;
+                            /*top: 0;*/
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--02 {
+                            left: 406px;
+                            top: 152px;
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--03 {
+                            left: 669px;
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--04 {
+                            left: 669px;
+                            top: 305px;
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--05 {
+                            left: 932px;
+                            top: 152px;
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--06 {
+                            left: 1196px;
+                        }
+
+                        .carousel--css-skin-short-portfolio .swiper-slide--07 {
+                            left: 142px;
+                            top: 305px;
+                        }
+    }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-short-portfolio .carousel {
+
+    }
+        .carousel--css-skin-short-portfolio .carousel__widget {
+
+        }
+            .carousel--css-skin-short-portfolio .carousel__widget .swiper {
+                overflow: visible; /* будем обрезать парой уровней выше, у границ экрана, а не контейнера */
+            }
+                .carousel--css-skin-short-portfolio .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-short-portfolio .swiper-slide {
+
+                    }
+                        .carousel--css-skin-short-portfolio .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                        }
+}
+
+
+
+
+/* Stories */
+
+@media (740px <= width) {
+
+    .carousel--css-skin-stories {
+
+    }
+        .carousel--css-skin-stories .carousel__widget {
+
+        }
+            .carousel--css-skin-stories .swiper {
+
+            }
+                .carousel--css-skin-stories .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-stories .swiper-slide {
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                    }
+
+                        .carousel--css-skin-stories .swiper-slide-active {
+                            opacity: 100%;
+                        }
+                            .carousel--css-skin-stories .thumbnail {
+                                transition: transform 1200ms var(--ease-out-quint);
+                            }
+
+                            .carousel--css-skin-stories .swiper-slide-active .thumbnail {
+                                transform: scale(130%);
+                            }
+}
+
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-stories {
+
+    }
+        .carousel--css-skin-stories .carousel__widget {
+
+        }
+
+        @media (min-width: 450px) {
+            .carousel--css-skin-stories .carousel__widget {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+            .carousel--css-skin-stories .swiper {
+
+            }
+                .carousel--css-skin-stories .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-stories .swiper-slide {
+
+                    }
+                        .carousel--css-skin-stories .swiper-slide-active {
+
+                        }
+                            .carousel--css-skin-stories .thumbnail {
+
+                            }
+
+                            .carousel--css-skin-stories .swiper-slide-active .thumbnail {
+
+                            }
+}
+
+
+/* Folder */
+
+.carousel--css-skin-folder {
+
+}
+    .carousel--css-skin-folder .carousel__widget {
+
+    }
+        .carousel--css-skin-folder .swiper {
+
+        }
+            .carousel--css-skin-folder .swiper-wrapper {
+                /* Если будем делать бегущую строку: */
+                /*transition-timing-function: linear;*/
+            }
+                .carousel--css-skin-folder .swiper-slide {
+
+                }
+
+                    .carousel--css-skin-folder .swiper-slide-active {
+
+                    }
+                        .carousel--css-skin-folder .thumbnail {
+
+                        }
+
+                        .carousel--css-skin-folder .swiper-slide-active .thumbnail {
+
+                        }
+
+
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-folder {
+
+    }
+        .carousel--css-skin-folder .carousel__widget {
+
+        }
+            .carousel--css-skin-folder .swiper {
+                overflow: visible;
+            }
+                .carousel--css-skin-folder .swiper-wrapper {
+                    /* Если будем делать бегущую строку: */
+                    /*transition-timing-function: linear;*/
+                }
+                    .carousel--css-skin-folder .swiper-slide {
+
+                    }
+                        .carousel--css-skin-folder .swiper-slide-active {
+
+                        }
+                            .carousel--css-skin-folder .thumbnail {
+
+                            }
+
+                            .carousel--css-skin-folder .swiper-slide-active .thumbnail {
+
+                            }
+}
+
+
+
+
+/* Skin Gallery */
+
+.carousel--css-skin-gallery {
+
+}
+
+@media (width < 740px) {
+
+    .carousel--css-skin-gallery {
+
+    }
+        .carousel--css-skin-gallery .carousel__widget {
+
+        }
+            .carousel--css-skin-gallery .swiper {
+                overflow: visible;
+            }
+                .carousel--css-skin-gallery .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-gallery .swiper-slide {
+
+                    }
+}
+
+
+
+
+/* Skin Certificates */
+
+.carousel--css-skin-certificates {
+
+}
+
+
+@media (740px <= width) {
+
+    .carousel--css-skin-certificates {
+
+    }
+        .carousel--css-skin-certificates .carousel__widget {
+
+        }
+            .carousel--css-skin-certificates .swiper {
+                overflow: visible;
+            }
+                .carousel--css-skin-certificates .swiper-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 14px;
+                }
+
+                @media (1850px <= width) {
+                    .carousel--css-skin-certificates .swiper-wrapper {
+                        gap: 20px;
+                    }
+                }
+                    .carousel--css-skin-certificates .swiper-slide {
+
+                    }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-certificates {
+
+    }
+        .carousel--css-skin-certificates .carousel__widget {
+
+        }
+            .carousel--css-skin-certificates .swiper {
+                overflow: visible; /* Будем обрезать краями браузера */
+            }
+                .carousel--css-skin-certificates .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-certificates .swiper-slide {
+
+                    }
+}
+
+
+
+
+/* Skin Solutions Systems */
+
+.carousel--css-skin-solutions-systems {
+
+}
+
+
+@media (740px <= width) {
+
+    .carousel--css-skin-solutions-systems {
+
+    }
+        .carousel--css-skin-solutions-systems .carousel__widget {
+
+        }
+            .carousel--css-skin-solutions-systems .swiper {
+
+            }
+                .carousel--css-skin-solutions-systems .swiper-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(6, 155px);
+                    gap: 0 32px;
+                    justify-content: center;
+                    padding-top: 284px;
+                    padding-bottom: 306px;
+                    background-image: url("../vectors/solutions-skeleton-laptop.svg");
+                    background-size: 1850px 2124px;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                }
+                    .carousel--css-skin-solutions-systems .swiper-slide {
+                        display: flex;
+                        margin-top: -71px !important;
+                    }
+
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+1),
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+2),
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+3) {
+                        grid-column: span 2;
+                    }
+
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+4),
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+5) {
+                        grid-column: span 3;
+                    }
+
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+4) {
+                        justify-content: flex-end;
+                    }
+
+                    .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+5) {
+                        justify-content: flex-start;
+                    }
+
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-solutions-systems {
+
+        }
+            .carousel--css-skin-solutions-systems .carousel__widget {
+
+            }
+                .carousel--css-skin-solutions-systems .swiper {
+
+                }
+                    .carousel--css-skin-solutions-systems .swiper-wrapper {
+                        /*display: grid;*/
+                        grid-template-columns: repeat(6, 174px);
+                        gap: 0 46px;
+                        /*justify-content: center;*/
+                        padding-top: 338px;
+                        /*padding-bottom: 306px;*/
+                        background-image: url("../vectors/solutions-skeleton-monitor.svg");
+                        background-size: 1934px 2546px; /* должно быть 1920x2546, но в фигме всё криво и по-этому подгоняем */
+                        /*background-repeat: no-repeat;*/
+                        /*background-position: center top;*/
+                    }
+                        .carousel--css-skin-solutions-systems .swiper-slide {
+                            /*display: flex;*/
+                            margin-top: -71px !important;
+                        }
+
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+1),
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+2),
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+3) {
+                            /*grid-column: span 2;*/
+                        }
+
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+4),
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+5) {
+                            /*grid-column: span 3;*/
+                        }
+
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+4) {
+                            /*justify-content: flex-end;*/
+                        }
+
+                        .carousel--css-skin-solutions-systems .swiper-slide:nth-child(5n+5) {
+                            /*justify-content: flex-start;*/
+                        }
+        }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-solutions-systems {
+
+    }
+        .carousel--css-skin-solutions-systems .carousel__widget {
+
+        }
+            .carousel--css-skin-solutions-systems .swiper {
+                overflow: visible; /* Будем обрезать краями браузера */
+            }
+                .carousel--css-skin-solutions-systems .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-solutions-systems .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+        .carousel--css-skin-solutions-systems .carousel__pagination {
+            color: #FFFFFF;
+        }
+}
+
+
+
+
+
+/* Skin Solutions modules */
+
+.carousel--css-skin-solutions-modules {
+
+}
+
+
+@media (740px <= width) {
+
+    .carousel--css-skin-solutions-modules {
+
+    }
+        .carousel--css-skin-solutions-modules .carousel__widget {
+
+        }
+            .carousel--css-skin-solutions-modules .swiper {
+
+            }
+                .carousel--css-skin-solutions-modules .swiper-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(2, 342px);
+                    gap: 0 57px;
+                    justify-content: center;
+                }
+                    .carousel--css-skin-solutions-modules .swiper-slide {
+
+                    }
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-solutions-modules {
+
+        }
+            .carousel--css-skin-solutions-modules .carousel__widget {
+
+            }
+                .carousel--css-skin-solutions-modules .swiper {
+
+                }
+                    .carousel--css-skin-solutions-modules .swiper-wrapper {
+                        grid-template-columns: repeat(2, 394px);
+                        gap: 0 68px;
+                    }
+                        .carousel--css-skin-solutions-modules .swiper-slide {
+
+                        }
+    }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-solutions-modules {
+
+    }
+        .carousel--css-skin-solutions-modules .carousel__widget {
+
+        }
+            .carousel--css-skin-solutions-modules .swiper {
+                overflow: visible; /* Будем обрезать краями браузера */
+            }
+                .carousel--css-skin-solutions-modules .swiper-wrapper {
+
+                }
+                    .carousel--css-skin-solutions-modules .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+        .carousel--css-skin-solutions-modules .carousel__pagination {
+            color: #FFFFFF;
+        }
+}
+
+

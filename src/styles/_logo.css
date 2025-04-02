@@ -1,0 +1,62 @@
+.logo {
+    display: block;
+    width: 172px;
+    height: 44px;
+    background-image: url("../images/logo/logo@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (min-resolution: 1.5dppx) {
+
+    .logo {
+        background-image: url("../images/logo/logo@2x.png");
+    }
+}
+
+@media (min-resolution: 2.5dppx) {
+
+    .logo {
+        background-image: url("../images/logo/logo@3x.png");
+    }
+}
+
+@media (width < 740px) {
+
+    .logo {
+        width: 146px;
+        height: 37px;
+    }
+}
+
+
+
+
+
+.logo--larger {
+    width: 189px;
+    height: 49px;
+}
+
+
+@media (1850px <= width) {
+
+    .logo--larger {
+        width: 216px;
+        height: 56px;
+    }
+}
+
+@media (width < 740px) {
+
+    .logo--larger {
+        width: 134px;
+        height: 34px;
+    }
+}
+
+

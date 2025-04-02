@@ -1,0 +1,235 @@
+/* В десктопных версиях .work важно обрезать по clip-path самый старший элемент компонента.
+   Это нужно, чтобы обрезались границы кликабельности гексагрна. */
+.work {
+    pointer-events: auto; /* могло быть сброшено на родителе .carousel--css-skin-full-portfolio-on-desktop .swiper-slide */
+    position: relative;
+    display: block;
+    width: 252px;
+    height: 218px;
+    clip-path: path("M189 0H63L0 109L63 218H189L252 109L189 0Z");
+}
+    .work__preview {
+        position: relative;
+        height: 100%;
+    }
+        .work__image {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: var(--image-fallback);
+            transition: transform 500ms var(--ease-out-quint);
+        }
+
+        .work:hover .work__image {
+            transform: scale(115%);
+        }
+
+
+        .work__preview::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-image: var(--hex-gradient);
+            clip-path: path("M189 0H63L0 109L63 218H189L252 109L189 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент ключит и прорывается наружу */
+            transition: opacity var(--transition-hover);
+        }
+
+
+        .work:hover .work__preview::after {
+
+        }
+
+    .work__label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /*min-height: 80px; !* 5 строк *!*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 50px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .work {
+        width: 342px;
+        height: 296px;
+        clip-path: path("M257 0H85L0 148L85 296H257L342 148L257 0Z");
+    }
+        .work__preview {
+
+        }
+            .work__image {
+
+            }
+
+            .work:hover .work__image {
+
+            }
+
+
+            .work__preview::after {
+                clip-path: path("M257 0H85L0 148L85 296H257L342 148L257 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент ключит и прорывается наружу */
+            }
+
+
+            .work:hover .work__preview::after {
+
+            }
+
+        .work__label {
+            /*min-height: 90px; !* 5 строк *!*/
+            margin: 18px 70px;
+            font-size: 15px;
+            line-height: 18px;
+        }
+}
+
+
+
+@media (width < 740px) {
+    /* На смартфонах границы кликабельности гексагрна не важны. Наоборот, это даже лучше, чтобы они были побольше.
+       Но нужно высводобить .work__label из под обрезания. По-этому переносим clip-path на .work__preview:
+    */
+    .work {
+        width: 278px;
+        height: auto;
+        clip-path: none;
+        text-decoration: none;
+    }
+        .work__preview {
+            width: 278px;
+            height: 240px;
+            clip-path: path("M208 0H70L0 120L70 240H208L278 120L208 0Z");
+        }
+
+            .work__image {
+
+            }
+
+            .work__preview::after {
+                background-image: linear-gradient(rgb(161 188 207 / 26%), var(--siniy1));
+                clip-path: path("M208 0H70L0 120L70 240H208L278 120L208 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент ключит и прорывается наружу */
+            }
+
+
+            .work:hover .work__preview::after {
+
+            }
+
+        .work__label {
+            margin-top: 22px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            position: static;
+            padding: 0 28px;
+            max-width: 270px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: none;
+        }
+}
+
+.work--new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../vectors/work-laptop-frame.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    transition: none var(--transition-hover);
+}
+
+.work--new:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--siniy1-hover);
+    background-image: url("../vectors/work-laptop-frame.svg"), linear-gradient(rgb(179 197 210 / 18%), var(--siniy1));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+    .work__add-project {
+
+    }
+
+    .work__add-project-hover {
+        display: none;
+    }
+
+
+    .work:hover .work__add-project {
+        display: none;
+    }
+
+    .work:hover .work__add-project-hover {
+        display: block;
+    }
+
+
+@media (1850px <= width) {
+
+    .work--new {
+        background-image: url("../vectors/work-monitor-frame.svg");
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (width < 740px) {
+
+    .work--new {
+        width: 278px;
+        height: 240px;
+        background-image: url("../vectors/work-smartphone-frame.svg");
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .work--new:hover {
+        background-color: transparent;
+        background-image: url("../vectors/work-smartphone-frame.svg");
+    }
+}
+
+
+
+
+/*@media (width < 740px) {*/
+
+/*    .work--new {*/
+/*        width: 340px;*/
+/*        height: 294px;*/
+/*        background-color: #00F0FF;*/
+/*        color: #0F33A9;*/
+/*    }*/
+/*    @media (width < 350px) {*/
+/*        .work--new {*/
+/*            width: 300px;*/
+/*            height: 260px;*/
+/*        }*/
+/*    }*/
+/*}*/

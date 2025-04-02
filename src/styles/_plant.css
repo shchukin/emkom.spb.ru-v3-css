@@ -1,0 +1,208 @@
+.plant {
+
+}
+    .plant__body {
+        height: 605px;
+        padding-top: 45px;
+        background-color: #1060BD;
+        background-image: url("../images/plant/plant-laptop@1x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+        @media (min-resolution: 1.5dppx) {
+            .plant__body {
+                background-image: url("../images/plant/plant-laptop@2x.jpg");
+            }
+        }
+
+        .plant__wrap {
+
+        }
+            .plant__heading {
+                margin-top: 0;
+                margin-bottom: 0;
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+                font-weight: inherit;
+                font-size: var(--body-font-size);
+                line-height: var(--body-line-height);
+                color: #FFFFFF;
+                text-align: center;
+                text-wrap: balance;
+            }
+
+            .plant__list {
+                margin-top: 50px;
+                max-width: 1020px;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 190px;
+            }
+                .plant__item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 36px;
+                }
+                    .plant__index {
+                        font-size: 46px;
+                        line-height: 46px;
+                        color: #FFFFFF;
+                    }
+
+                    .plant__label {
+                        margin-top: 6px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: #FFFFFF;
+                    }
+                        .plant__label .strong {
+                            font-weight: bold;
+                        }
+
+
+    .plant__action {
+        margin-top: 47px;
+        text-align: center;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .plant {
+
+    }
+        .plant__body {
+            height: 605px;
+            background-image: url("../images/plant/plant-monitor@1x.jpg");
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+        }
+
+        @media (min-resolution: 1.5dppx) {
+            .plant__body {
+                background-image: url("../images/plant/plant-monitor@2x.jpg");
+            }
+        }
+
+            .plant__wrap {
+
+            }
+                .plant__heading {
+                    /*font-weight: normal;*/
+                    /*font-size: 22px;*/
+                    /*line-height: 27px;*/
+                    /*color: #FFFFFF;*/
+                    /*text-align: center;*/
+                    /*text-wrap: balance;*/
+                }
+
+                .plant__list {
+                    max-width: 1100px;
+                    gap: 270px;
+                }
+                    .plant__item {
+                        /*display: flex;*/
+                        /*align-items: flex-start;*/
+                        /*gap: 36px;*/
+                    }
+                        .plant__index {
+                            /*font-size: 46px;*/
+                            /*line-height: 46px;*/
+                            /*color: #FFFFFF;*/
+                        }
+
+                        .plant__label {
+                            /*margin-top: 6px;*/
+                            /*font-weight: 400;*/
+                            /*font-size: 22px;*/
+                            /*line-height: 28px;*/
+                            /*color: #FFFFFF;*/
+                        }
+                            .plant__label .strong {
+                                /*font-weight: bold;*/
+                            }
+
+    .plant__action {
+        margin-top: 52px;
+    }
+}
+
+
+
+@media (width < 740px) {
+
+    .plant {
+
+    }
+        .plant__body {
+            height: 605px;
+            padding-top: 16px;
+            background-image: url("../images/plant/plant-smartphone@1x.jpg");
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+        }
+            @media (min-resolution: 1.5dppx) {
+                .plant__body {
+                    background-image: url("../images/plant/plant-smartphone@2x.jpg");
+                }
+            }
+
+            .plant__wrap {
+
+            }
+                .plant__heading {
+
+                }
+
+                .plant__list {
+                    margin-top: 40px;
+                    /*max-width: 870px;*/
+                    /*margin-left: auto;*/
+                    /*margin-right: auto;*/
+                    display: block;
+                    /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
+                    /*gap: 40px;*/
+                }
+                    .plant__item {
+                        margin-top: 13px;
+                        /*display: flex;*/
+                        /*align-items: flex-start;*/
+                        gap: 0;
+                    }
+
+                    .plant__item:first-child {
+                        margin-top: 0;
+                    }
+
+                        .plant__index {
+                            width: 72px;
+                            flex-shrink: 0;
+                            /*font-size: 46px;*/
+                            /*line-height: 46px;*/
+                            /*color: #FFFFFF;*/
+                        }
+
+                        .plant__label {
+                            margin-top: 10px;
+                            /*font-weight: 400;*/
+                            font-size: 17px;
+                            line-height: 22px;
+                            /*color: #FFFFFF;*/
+                        }
+                            .plant__label .strong {
+                                /*font-weight: bold;*/
+                            }
+    .plant__action {
+        margin-top: 30px;
+    }
+}
+
+

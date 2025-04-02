@@ -1,0 +1,18 @@
+body {
+    height: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+}
+
+@media (width < 740px) {
+    .burger-expanded body {
+        background-color: var(--siniy1);
+        background-image: url("../vectors/menu.svg"), var(--linear-gradient-inverted);
+        background-size: 740px 900px, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+}

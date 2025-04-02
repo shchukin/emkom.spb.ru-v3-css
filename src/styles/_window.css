@@ -1,0 +1,129 @@
+.window {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    background-color: #EBEBEB;
+    border-radius: 11px;
+}
+    .window__close {
+        position: absolute;
+        right: 0 !important;
+        top: 0 !important;
+        width: 50px;
+        height: 50px;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        opacity: 1;
+    }
+        .window__cross {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 18px;
+            height: 18px;
+            fill: var(--siniy1);
+            transition: fill var(--transition-hover);
+            pointer-events: none; /* mfp глючит, когда кликаем именно во внутренности */
+        }
+
+        .window__close:hover .window__cross {
+            fill: var(--siniy1-hover);
+        }
+
+
+
+@media (1850px <= width) {
+
+    .window {
+        /*position: relative;*/
+        /*display: inline-block;*/
+        /*vertical-align: top;*/
+        /*text-align: left;*/
+        /*background-color: #E6F5FF;*/
+        /*border-radius: 11px;*/
+    }
+        .window__close {
+            /*position: absolute;*/
+            /*right: 0 !important;*/
+            /*top: 0 !important;*/
+            width: 80px;
+            height: 80px;
+            /*text-indent: 200%;*/
+            /*white-space: nowrap;*/
+            /*overflow: hidden !important;*/
+            /*opacity: 1;*/
+        }
+            .window__cross {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+                /*margin: auto;*/
+                width: 26px;
+                height: 26px;
+                /*fill: var(--siniy1);*/
+                /*transition: fill var(--transition-hover);*/
+            }
+
+            .window__close:hover .window__cross {
+                /*fill: var(--siniy1-hover);*/
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .window {
+        /*position: relative;*/
+        /*display: inline-block;*/
+        /*vertical-align: top;*/
+        /*text-align: left;*/
+        /*background-color: #E6F5FF;*/
+        /*border-radius: 11px;*/
+    }
+
+    @media (width < 456px) {
+        .window {
+            width: 100%;
+        }
+    }
+
+        .window__close {
+            /*position: absolute;*/
+            /*right: 0 !important;*/
+            /*top: 0 !important;*/
+            /*width: 60px;*/
+            /*height: 60px;*/
+            /*text-indent: 200%;*/
+            /*white-space: nowrap;*/
+            /*overflow: hidden !important;*/
+            /*opacity: 1;*/
+        }
+            .window__cross {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+                /*margin: auto;*/
+                width: 20px;
+                height: 20px;
+                /*fill: var(--siniy1);*/
+                /*transition: fill var(--transition-hover);*/
+            }
+
+            .window__close:hover .window__cross {
+                /*fill: var(--siniy1-hover);*/
+            }
+}
+

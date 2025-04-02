@@ -1,0 +1,120 @@
+.service {
+    overflow: hidden; /* Обрезаем карусели */
+    padding-top: 3px;
+    padding-bottom: var(--bottom-padding);
+}
+    .service__preview {
+        height: 416px;
+    }
+        .service__image {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: var(--image-fallback);
+        }
+
+    .service__body {
+        margin-top: 36px;
+    }
+        .service__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+
+        .service__top-content {
+            margin-top: 29px;
+        }
+
+        .service__gallery {
+            margin-top: 48px;
+        }
+
+        .service__bottom-content {
+            margin-top: 48px;
+        }
+
+
+@media (1850px <= width) {
+
+    .service {
+
+    }
+        .service__preview {
+            height: 538px;
+        }
+            .service__image {
+
+            }
+
+        .service__body {
+            margin-top: 41px;
+        }
+            .service__heading {
+                font-size: 50px;
+                line-height: 58px;
+            }
+
+            .service__top-content {
+                margin-top: 34px;
+            }
+
+            .service__gallery {
+                /*margin-top: 48px;*/
+            }
+
+            .service__bottom-content {
+                /*margin-top: 48px;*/
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .service {
+        /*padding-top: 3px;*/
+        /*padding-bottom: var(--bottom-padding);*/
+    }
+        .service__preview {
+            height: 276px;
+        }
+            .service__image {
+                /*vertical-align: top;*/
+                /*width: 100%;*/
+                /*height: 100%;*/
+                /*object-fit: cover;*/
+            }
+
+        .service__body {
+            margin-top: 20px;
+        }
+            .service__heading {
+
+            }
+
+            .service__top-content {
+                margin-top: 10px;
+            }
+
+            .service__gallery {
+                margin-top: 34px;
+                /*gap: 14px;*/
+            }
+                .service__gallery-item {
+
+                }
+
+                .service__gallery-item:nth-child(n+2) {
+                    display: none;
+                }
+
+            .service__bottom-content {
+                margin-top: 24px;
+            }
+}
+

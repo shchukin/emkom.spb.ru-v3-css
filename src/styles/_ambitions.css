@@ -1,0 +1,82 @@
+.ambitions {
+    padding-top: 26px;
+    padding-bottom: 44px;
+}
+    .ambitions__top-content {
+
+    }
+
+    .ambitions__gallery {
+        margin-top: 32px;
+    }
+
+    .ambitions__bottom-content {
+        margin-top: 40px;
+    }
+
+    .ambitions__action {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .ambitions {
+
+    }
+        .ambitions__top-content {
+
+        }
+
+        .ambitions__gallery {
+
+        }
+
+        .ambitions__bottom-content {
+
+        }
+
+        .ambitions__action {
+
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .ambitions {
+        padding-top: 30px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+        .ambitions__top-content {
+            order: 1;
+        }
+
+        .ambitions__gallery {
+            margin-top: 30px;
+            order: 2;
+            width: 100%; /* чтобы не ломался swiper внутри */
+        }
+
+        .ambitions__bottom-content {
+            margin-top: 30px;
+            order: 4;
+        }
+
+        .ambitions__action {
+            margin-top: 30px;
+            order: 3;
+        }
+            .ambitions__action .button {
+                width: 100%;
+                max-width: 400px;
+            }
+}
+
+

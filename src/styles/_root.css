@@ -1,0 +1,53 @@
+:root {
+    --font: "Montserrat";
+    --body-font-size: 17px;
+    --body-line-height: 27px;
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-hover: 100ms ease;
+    /*--transition-show: 1200ms var(--ease-out-quint);*/
+    --image-fallback: var(--siniy1);
+    --container-padding: 24px;
+
+    --input-border: #B3B3B3;
+    --input-border-hover: var(--siniy1-hover);
+    --input-border-focus: var(--siniy1);
+    --placeholder-color: #C9C9C9;
+    --disabled-background: #FAFAFA;
+    --disabled-color: #C9C9C9;
+    --error: #FF0033;
+    --top-padding: 20px;
+    --bottom-padding: calc(var(--top-padding) * 2);
+    --header-height: 102px;
+    --tiles-gap: 20px;
+
+    --siniy1: #0068B2;
+    --siniy1-hover: #0099FF; /* Аналогично голубому */
+    --goluboy: #0099FF;
+    --temno-siniy: #002C4C;
+    --seriy-text: #565656;
+    --radial-gradient: radial-gradient(ellipse at center, #027BC8, #013D62);
+    --linear-gradient: linear-gradient(#017BC8, #017BC8 31%, #003C62);
+    --linear-gradient-inverted: linear-gradient(#003C62, #017BC8 69%, #017BC8);
+    --hex-gradient: linear-gradient(rgb(145 179 204 / 33%), var(--siniy1));
+}
+
+@media (1850px <= width) {
+    :root {
+        --container-padding: 60px;
+        --top-padding: 30px;
+        --body-font-size: 18px;
+        --body-line-height: 29px;
+        --tiles-gap: 24px;
+    }
+}
+
+@media (width < 740px) {
+    :root {
+        --header-height: 90px;
+        --container-padding: 16px;
+        --top-padding: 14px;
+        --body-font-size: 14px;
+        --body-line-height: 20px;
+        --tiles-gap: 12px;
+    }
+}

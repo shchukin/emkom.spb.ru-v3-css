@@ -1,0 +1,28 @@
+.request-button {
+    display: block;
+    padding: 17px;
+    width: 100%;
+    border: 1px solid #00F0FF;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #00F0FF;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color var(--transition-hover),
+                color var(--transition-hover);
+}
+
+.request-button:hover {
+    background-color: #07F0FF;
+    color: #0F33A8;
+}
+
+
+@media (width < 740px) {
+
+    .request-button {
+        padding: 8px 14px;
+    }
+}

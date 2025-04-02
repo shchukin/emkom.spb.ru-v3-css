@@ -1,0 +1,45 @@
+.manufacturing {
+    padding-top: var(--top-padding);
+}
+    .manufacturing__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .manufacturing__list {
+        margin-top: var(--top-padding);
+    }
+
+
+
+@media (1850px <= width) {
+
+    .manufacturing {
+
+    }
+        .manufacturing__heading {
+
+        }
+
+        .manufacturing__list {
+
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .manufacturing {
+
+    }
+        .manufacturing__heading {
+
+        }
+
+        .manufacturing__list {
+
+        }
+}
+

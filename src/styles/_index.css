@@ -1,0 +1,301 @@
+.index {
+    position: relative;
+    background-color: #00578C;
+    background-image: url("../vectors/intro-laptop.svg"), var(--radial-gradient);
+    background-size: 1280px 661px, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: #FFFFFF;
+}
+    .index__intro {
+        position: relative;
+        padding-top: 193px;
+    }
+        .index__item {
+            position: absolute;
+            top: 15px;
+        }
+
+        .index__item--first {
+            left: 0;
+            right: calc(50% + 113px);
+            text-align: right;
+        }
+
+        .index__item--last {
+            left: calc(50% + 113px);
+            right: 0;
+        }
+            .index__sub-heading {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 27px;
+                text-transform: uppercase;
+            }
+                .index__link {
+                    color: inherit;
+                    text-decoration: 1.5px underline transparent;
+                    text-underline-offset: 4px;
+                    transition: text-decoration-color var(--transition-hover);
+                }
+
+                .index__link:hover {
+                    text-decoration-color: inherit;
+                }
+
+            .index__description {
+                margin-top: 10px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .index__action {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                margin-top: 17px;
+            }
+
+            .index__item--first .index__action {
+                right: 0;
+            }
+
+            .index__item--last .index__action {
+                left: 0;
+            }
+                .index__action.button,
+                .index__action .button {
+                    width: 150px;
+                }
+
+    .index__projects {
+
+    }
+        .index__projects-wrap {
+
+        }
+            .index__projects-heading {
+                position: absolute;
+                top: 136px;
+                left: 0;
+                right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: fit-content;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+            }
+                .index__projects-heading::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    margin-top: 12px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 0;
+                    border-top: 8px solid currentColor;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                }
+
+            .index__projects-body {
+                padding-bottom: 26px;
+            }
+
+
+
+@media (1850px <= width) {
+
+    .index {
+        background-image: url("../vectors/intro-monitor.svg"), var(--radial-gradient);
+        background-size: 1920px 831px, 100% 100%;
+    }
+        .index__intro {
+            padding-top: 213px;
+        }
+            .index__item {
+                top: 27px;
+            }
+
+            .index__item--first {
+                right: calc(50% + 169px);
+            }
+
+            .index__item--last {
+                left: calc(50% + 169px);
+            }
+                .index__sub-heading {
+                    font-size: 34px;
+                    line-height: 41px;
+                }
+                    .index__link {
+
+                    }
+
+                    .index__link:hover {
+
+                    }
+
+                .index__description {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                .index__action {
+                    margin-top: 24px;
+                }
+
+                .index__item--first .index__action {
+
+                }
+
+                .index__item--last .index__action {
+
+                }
+                    .index__action.button,
+                    .index__action .button {
+                        width: 190px;
+                    }
+
+        .index__projects {
+
+        }
+            .index__projects-wrap {
+
+            }
+                .index__projects-heading {
+                    top: 148px;
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                    .index__projects-heading::after {
+                        border-top: 9px solid currentColor;
+                        border-left: 9px solid transparent;
+                        border-right: 9px solid transparent;
+                    }
+
+                .index__projects-body {
+
+                }
+}
+
+
+
+@media (width < 740px) {
+
+    .index {
+        background-image: url("../vectors/intro-smartphone.svg"), linear-gradient(#003C62, #017BC8 69%, #027BC8);
+        background-size: 740px 272px, 100% 100%;
+    }
+        .index__intro {
+            /*position: relative;*/
+            padding-top: 69px;
+            padding-bottom: 29px;
+        }
+            .index__item {
+                position: static;
+            }
+
+            .index__item--first {
+                /*left: 0;*/
+                /*right: calc(50% + 113px);*/
+                text-align: left;
+            }
+
+            .index__item--last {
+                margin-top: 25px;
+            }
+                .index__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                    /*font-weight: 500;*/
+                    max-width: 360px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 18px;
+                    line-height: 25px;
+                    /*text-transform: uppercase;*/
+                }
+                    .index__link {
+                        display: flex;
+                        align-items: flex-start;
+                    }
+
+                    .index__link:hover {
+                        /*text-decoration-color: inherit;*/
+                    }
+                        .index__link br {
+                            display: none;
+                        }
+
+                        .index__link::before {
+                            content: "";
+                            flex-shrink: 0;
+                            display: block;
+                            margin-right: 8px;
+                            margin-left: -1px;
+                            margin-top: 5px;
+                            width: 23px;
+                            height: 16px;
+                            background-image: url("../vectors/arrow-7.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+
+                .index__description {
+                    display: none;
+                    /*margin-top: 10px;*/
+                    /*font-weight: 500;*/
+                    /*font-size: 14px;*/
+                    /*line-height: 17px;*/
+                }
+
+                .index__action {
+                    display: none;
+                }
+
+                .index__item--first .index__action {
+                    /*right: 0;*/
+                }
+
+                .index__item--last .index__action {
+                    /*left: 0;*/
+                }
+                    .index__action.button,
+                    .index__action .button {
+                        /*width: 150px;*/
+                    }
+
+        .index__projects {
+            overflow: hidden; /* Обрезаем карусель */
+            background-color: var(--temno-siniy);
+            padding-top: 27px;
+            padding-bottom: 24px;
+        }
+            .index__projects-wrap {
+
+            }
+                .index__projects-heading {
+                    position: static;
+                }
+                    .index__projects-heading::after {
+                        display: none;
+                    }
+
+                .index__projects-body {
+                    margin-top: 10px;
+                }
+}
+
+

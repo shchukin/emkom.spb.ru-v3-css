@@ -1,0 +1,174 @@
+.input {
+
+}
+    .input__widget {
+        vertical-align: top;
+        width: 100%;
+        height: 56px;
+        padding: 15px 20px;
+        background-color: #FFFFFF; /* reset grey background in some cases, such as <select> */
+        background-clip: padding-box; /* hack for iOS to make box-shadow works (same as border-radius in the past) */
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        font-family: inherit;
+        font-size: 17px; /* not less than 16px (otherwise mobile browsers will zoom in on focus) */
+        line-height: 26px;
+        color: #000000;
+        opacity: 1; /* reset select:disabled default fade on iOS */
+        -webkit-tap-highlight-color: transparent;
+        transition: box-shadow var(--transition-hover);
+    }
+
+    @media (1850px <= width) {
+
+        .input__widget {
+            border-radius: 5px;
+            height: 76px;
+            padding: 23px 24px;
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+
+    .input__widget::placeholder {
+        opacity: 1; /* reset opacity drop Firefox */
+        color: var(--placeholder-color);
+    }
+
+    .input__widget:hover {
+        box-shadow: 0 0 0 2px var(--siniy1-hover);
+    }
+
+    .input__widget:focus-visible {
+        box-shadow: 0 0 0 2px var(--input-border-focus);
+        transition: none;
+    }
+
+    @media (1850px <= width) {
+
+        .input__widget:focus-visible {
+            box-shadow: 0 0 0 3px var(--input-border-focus);
+        }
+    }
+
+
+    .input__widget[type="password"]:not(:placeholder-shown) {
+        font-family: "Tahoma", sans-serif;
+        letter-spacing: 2px;
+    }
+
+
+    .input__widget[type="color"] {
+        width: 100px;
+        padding: 4px 8px;
+    }
+
+
+    /* Either "appearance: none; width: 100%;" or "width: auto; to reset the width set above" */
+    .input__widget[type="date"],
+    .input__widget[type="datetime-local"],
+    .input__widget[type="week"],
+    .input__widget[type="month"],
+    .input__widget[type="time"] {
+        width: auto;
+    }
+
+
+/* Disabled */
+.input__widget:disabled {
+    background-color: var(--disabled-background);
+    box-shadow: none;
+    color: var(--disabled-color);
+}
+
+.input__widget:disabled::placeholder {
+    color: var(--disabled-color);
+}
+
+
+/* Error */
+.input--error {
+
+}
+    .input--error .input__widget {
+        color: var(--error);
+        border-color: var(--error);
+    }
+
+    .input--error .input__widget:hover {
+        border-color: var(--input-border-focus);
+    }
+
+    .input--error .input__widget::placeholder {
+        color: var(--error);
+    }
+
+
+/* stylelint-disable */
+textarea.input__widget {
+    height: auto; /* user rows="" attribute to set a default height */
+    min-height: 50px; /* 1 row */
+    max-height: calc(10*24px + 2*16px); /* rows + vertical paddings */
+    resize: vertical;
+}
+
+@media (1850px <= width) {
+    textarea.input__widget {
+        max-height: calc(10*25px + 2*26px); /* rows + vertical paddings */
+    }
+}
+/* stylelint-enable */
+
+
+select.input__widget {
+    appearance: none;
+    padding-right: 50px;
+    background-image: url("../vectors/dropdown.svg");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+}
+
+select.input__widget:hover {
+    box-shadow: none; /* same as base, not hover input */
+    border-color: var(--input-border); /* same as base, not hover input */
+    background-color: #F6F6F6;
+}
+
+/* Disabled */
+select.input__widget:disabled {
+    background-color: var(--disabled-background);
+    cursor: default;
+}
+
+
+
+/* Error */
+.input--error select.input__widget {
+    background-image: url("../vectors/dropdown-error.svg");
+}
+
+.input--error select.input__widget:hover {
+    border-color: var(--error);
+}
+
+.input--placeholder-is-chosen {
+
+}
+    .input--placeholder-is-chosen select.input__widget {
+        color: var(--placeholder-color);
+    }
+
+    .input--placeholder-is-chosen select.input__widget:disabled {
+        color: var(--disabled-color);
+    }
+
+    .input--placeholder-is-chosen.input--error select.input__widget {
+        color: var(--error);
+    }
+        .input--placeholder-is-chosen select.input__widget option {
+            color: #000000; /* Browsers on Windows inherit grey color from <select> to <option>`s. Reset it. */
+        }
+

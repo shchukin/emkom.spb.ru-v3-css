@@ -1,0 +1,102 @@
+.portfolio {
+    padding-top: var(--top-padding);
+    background-image: linear-gradient(#FFFFFF, #686868);
+    background-size: 100% 2000px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+    .portfolio__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .portfolio__description {
+        margin-top: var(--top-padding);
+        max-width: 1380px;
+        text-align: center;
+    }
+
+    .portfolio__list {
+        margin-top: var(--top-padding);
+        overflow: hidden; /* обрезаем пустые гексагоны и карусель на смартфонах */
+    }
+        .portfolio__list-wrap {
+
+        }
+
+    .portfolio__map {
+        position: relative;
+        margin-top: -89px;
+    }
+        .portfolio__map-heading {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 151px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #FFFFFF;
+        }
+
+
+@media (1850px <= width) {
+
+    .portfolio {
+
+    }
+        .portfolio__heading {
+
+        }
+
+        .portfolio__list {
+
+        }
+            .portfolio__list-wrap {
+
+            }
+
+        .portfolio__map {
+            margin-top: -92px;
+        }
+            .portfolio__map-heading {
+                top: 158px;
+            }
+}
+
+
+
+
+@media (width < 740px) {
+
+    .portfolio {
+        background-image: none;
+    }
+        .portfolio__heading {
+
+        }
+
+        .portfolio__list {
+            padding-top: 38px;
+            padding-bottom: 18px;
+            background-color: #0072BB;
+            background-image: var(--linear-gradient);
+            color: #FFFFFF;
+        }
+            .portfolio__list-wrap {
+
+            }
+
+        .portfolio__map {
+            margin-top: var(--top-padding);
+        }
+            .portfolio__map-heading {
+                position: static;
+                color: #000000;
+                max-width: 180px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: var(--top-padding);
+            }
+}

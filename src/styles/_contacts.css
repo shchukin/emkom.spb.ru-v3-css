@@ -1,0 +1,254 @@
+.contacts {
+    padding-top: var(--top-padding);
+    padding-bottom: 32px;
+    background-image: url("../images/contacts/contacts-laptop@1x.jpg"), linear-gradient(#0279C5, #0279C5);
+    background-size: 1280px 328px, 100% 328px;
+    background-repeat: no-repeat;
+    background-position: center calc(27px + 2 * var(--top-padding)); /* 27px -- высота заголока */
+}
+
+@media (min-resolution: 1.5dppx) {
+    .contacts {
+        background-image: url("../images/contacts/contacts-laptop@2x.jpg"), linear-gradient(#0279C5, #0279C5);
+    }
+}
+    .contacts__wrap {
+
+    }
+        .contacts__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            color: var(--seriy-text);
+        }
+
+        .contacts__body {
+            margin-top: 370px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 500px));
+            padding-left: 106px;
+            gap: 48px;
+        }
+            .contacts__item {
+
+            }
+
+            .contacts__item--spb {
+
+            }
+
+            .contacts__item--kirovsk {
+
+            }
+                .contacts__sub-heading {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    color: var(--seriy-text);
+                }
+
+                .contacts__list {
+                    margin-top: 20px;
+                }
+                    .contacts__channel {
+                        position: relative;
+                        padding-left: 46px;
+                        margin-top: 10px;
+                    }
+
+                    .contacts__channel:first-child {
+                        margin-top: 0;
+                    }
+                        .contacts__icon {
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                            vertical-align: top;
+                            width: 20px;
+                            height: auto;
+                            fill: var(--siniy1);
+                            scale: 110%;
+                        }
+
+                        .contacts__icon--email {
+                            margin-top: 6px;
+                        }
+
+                        .contacts__value {
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: #565656;
+                        }
+                            .contacts__working-hours {
+                                margin-top: 10px;
+                            }
+
+
+
+@media (1850px <= width) {
+
+    .contacts {
+        padding-bottom: 40px;
+        background-image: url("../images/contacts/contacts-monitor@1x.jpg"), linear-gradient(#0279C5, #0279C5);
+        background-size: 1920px 378px, 100% 378px;
+        background-repeat: no-repeat;
+        background-position: center calc(52px + 2 * var(--top-padding)); /* 52px -- высота заголока */
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .contacts {
+            background-image: url("../images/contacts/contacts-monitor@2x.jpg"), linear-gradient(#0279C5, #0279C5);
+        }
+    }
+        .contacts__wrap {
+
+        }
+            .contacts__heading {
+
+            }
+
+            .contacts__body {
+                margin-top: 428px;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 486px));
+                padding-left: 340px;
+                gap: 60px;
+            }
+                .contacts__item {
+
+                }
+
+                .contacts__item--spb {
+
+                }
+
+                .contacts__item--kirovsk {
+
+                }
+                    .contacts__sub-heading {
+
+                    }
+
+                    .contacts__list {
+                        margin-top: 25px;
+                    }
+                        .contacts__channel {
+                            /*position: relative;*/
+                            /*padding-left: 50px;*/
+                            /*margin-top: var(--body-line-height);*/
+                        }
+
+                        .contacts__channel:first-child {
+                            /*margin-top: 0;*/
+                        }
+                            .contacts__icon {
+                                /*position: absolute;*/
+                                /*left: 0;*/
+                                /*top: 2px;*/
+                                /*vertical-align: top;*/
+                                width: 24px;
+                                /*height: auto;*/
+                                /*fill: #0F33A9;*/
+                            }
+
+                            .contacts__icon--email {
+                                /*margin-top: 6px;*/
+                            }
+
+                            .contacts__value {
+                                /*font-size: 22px;*/
+                                /*line-height: 27px;*/
+                                /*color: #0F33A9;*/
+                            }
+}
+
+
+
+@media (width < 740px) {
+
+    .contacts {
+        background-image: none;
+        overflow: hidden; /* На всякий случае если contacts__sub-heading выезжает за границы экрана на смартфонах и добавляет горизонтальный скролл в пару пикселей */
+    }
+        .contacts__wrap {
+
+        }
+            .contacts__heading {
+
+            }
+
+            .contacts__body {
+                margin-top: var(--top-padding);
+                display: block;
+                padding-left: 0;
+            }
+                .contacts__item {
+                    margin-top: 0;
+                }
+
+                .contacts__item--spb {
+
+                }
+
+                .contacts__item--kirovsk {
+                    margin-top: 20px;
+                }
+                    .contacts__sub-heading {
+                        text-align: center;
+                        margin-left: calc(-1 * var(--container-padding));
+                        margin-right: calc(-1 * var(--container-padding));
+                        padding-top: 120px;
+                        padding-bottom: 10px;
+                        background-color: #0279C5;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+
+                    @media (440px <= width) {
+                        .contacts__sub-heading {
+                            background-size: 360px 156px;
+                        }
+                    }
+
+                    .contacts__item--spb .contacts__sub-heading {
+                        background-image: url("../images/contacts/contacts-smartphone-saint-petersburg@1x.jpg");
+                    }
+
+                    .contacts__item--kirovsk .contacts__sub-heading {
+                        background-image: url("../images/contacts/contacts-smartphone-kirovsk@1x.jpg");
+                    }
+
+                    .contacts__list {
+                        margin-top: 16px;
+                    }
+                        .contacts__channel {
+                            /*position: relative;*/
+                            /*padding-left: 36px;*/
+                            margin-top: 18px;
+                            padding-left: 33px;
+                        }
+
+                        .contacts__channel:first-child {
+                            /*margin-top: 0;*/
+                        }
+                            .contacts__icon {
+                                top: -1px;
+                                scale: 90%;
+                                transform-origin: center top;
+                            }
+
+                            .contacts__icon--email {
+                                margin-top: 6px;
+                            }
+
+                            .contacts__value {
+                                font-size: 14px;
+                                line-height: 20px;
+                                /*color: #0F33A9;*/
+                            }
+}
+

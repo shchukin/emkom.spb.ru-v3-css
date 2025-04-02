@@ -1,0 +1,103 @@
+.geo {
+    height: 741px;
+    background-image: url("../images/geo/geo-laptop@1x.png");
+    background-size: 1850px 741px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+@media (min-resolution: 1.5dppx) {
+    .geo {
+        background-image: url("../images/geo/geo-laptop@2x.png");
+    }
+}
+
+    .geo__wrap {
+
+    }
+        .geo__list {
+            display: none;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .geo {
+        height: 891px;
+        background-image: url("../images/geo/geo-monitor@1x.png");
+        background-size: 2590px 891px;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .geo {
+            background-image: url("../images/geo/geo-monitor@2x.png");
+        }
+    }
+        .geo__wrap {
+
+        }
+            .geo__list {
+
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .geo {
+        height: auto;
+        min-height: 621px;
+        background-image: url("../images/geo/geo-smartphone@1x.jpg");
+        background-size: 740px 621px;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+
+        .geo {
+            background-image: url("../images/geo/geo-smartphone@2x.jpg");
+        }
+    }
+
+        .geo__list {
+            display: block;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 26px 0;
+            list-style: none;
+            columns: 2;
+            gap: 12px;
+        }
+            .geo__item {
+                position: relative;
+                padding-left: 24px;
+                margin-bottom: 14px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #FFFFFF;
+            }
+
+            @media (width < 350px) {
+                .geo__item {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+                .geo__item::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 7px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: var(--goluboy);
+                    border-radius: 50%;
+                }
+}
+
+

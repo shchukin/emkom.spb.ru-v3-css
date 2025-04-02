@@ -1,0 +1,55 @@
+.folder {
+    overflow: hidden;
+    padding-top: 65px;
+    padding-bottom: 60px;
+}
+    .folder__gallery {
+
+    }
+
+    .folder__action {
+        margin-top: 47px;
+        text-align: center;
+    }
+
+
+
+
+@media (1850px <= width) {
+
+    .folder {
+
+    }
+        .folder__gallery {
+
+        }
+
+        .folder__action {
+            margin-top: 52px;
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .folder {
+        padding-top: 34px;
+        padding-bottom: 30px;
+    }
+        .folder__gallery {
+
+        }
+
+        .folder__action {
+            margin-top: 30px;
+            text-align: center;
+        }
+            .folder__action .button {
+                width: 100%;
+                max-width: 400px;
+            }
+}
+
+
+

@@ -1,0 +1,149 @@
+.construction {
+    pointer-events: auto; /* могло быть сброшено на родителе .carousel--css-skin-full-portfolio-on-desktop .swiper-slide */
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 403px;
+    clip-path: path("M174.5 0L0.0550983 100.75L0 302.25L174.5 403L350 302.25V100.751L174.5 0Z");
+}
+    .construction__preview {
+        position: relative;
+        height: 100%;
+    }
+        .construction__image {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: var(--image-fallback);
+            transition: transform 500ms var(--ease-out-quint);
+        }
+
+        .construction:hover .construction__image {
+            transform: scale(115%);
+        }
+
+
+        .construction__preview::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-image: var(--hex-gradient);
+            clip-path: path("M174.5 0L0.0550983 100.75L0 302.25L174.5 403L350 302.25V100.751L174.5 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент глючит и прорывается наружу */
+            transition: opacity var(--transition-hover);
+        }
+
+
+        .construction:hover .construction__preview::after {
+
+        }
+
+    .construction__label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 125px; /* 5 строк */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 70px 44px;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 25px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .construction__details {
+        display: none;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .construction {
+        width: 366px;
+        height: 422px;
+        clip-path: path("M182.998 0L0.057741 105.5L0 316.5L183 422L366 316.5L365.993 105.5L182.998 0Z");
+    }
+        .construction__preview {
+
+        }
+            .construction__image {
+
+            }
+
+            .construction:hover .construction__image {
+
+            }
+
+
+            .construction__preview::after {
+                clip-path: path("M182.998 0L0.057741 105.5L0 316.5L183 422L366 316.5L365.993 105.5L182.998 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент глючит и прорывается наружу */
+            }
+
+
+            .construction:hover .construction__preview::after {
+
+            }
+
+        .construction__label {
+            min-height: 130px; /* 5 строк */
+            margin: 80px 48px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        .construction__details {
+
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .construction {
+        width: 282px;
+        height: 244px;
+        clip-path: path("M211.5 0H70.5L0 122L70.5 244H211.5L282 122L211.5 0Z");
+    }
+        .construction__preview {
+
+        }
+            .construction__image {
+
+            }
+
+            .construction:hover .construction__image {
+
+            }
+
+
+            .construction__preview::after {
+                clip-path: path("M211.5 0H70.5L0 122L70.5 244H211.5L282 122L211.5 0Z"); /* Повторяем маску из того, что выше, а то иногда этот градиент глючит и прорывается наружу */
+            }
+
+
+            .construction:hover .construction__preview::after {
+
+            }
+
+        .construction__label {
+            margin: 20px 50px;
+            min-height: 100px; /* 5 строк */
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .construction__details {
+
+        }
+}
+

@@ -1,0 +1,379 @@
+.product {
+    pointer-events: auto;
+    display: block;
+    width: 342px;
+    height: 394px;
+    clip-path: path("M342 99L171 0L0 99V295L171 394L342 295V99Z");
+}
+    .product__inner {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 1400ms var(--ease-out-quint);
+    }
+
+    .product:hover .product__inner {
+        transform: rotateY(180deg);
+    }
+        .product__preview {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+            .product__image {
+                vertical-align: top;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .product__preview::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-image: var(--hex-gradient);
+                transition: opacity var(--transition-hover);
+            }
+
+        .product__side {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #FFFFFF;
+            text-align: center;
+            backface-visibility: hidden;
+            clip-path: path("M342 99L171 0L0 99V295L171 394L342 295V99Z");
+        }
+
+        .product__side--front {
+            transform: rotateX(0deg);
+            justify-content: flex-end;
+        }
+            .product__front-heading {
+                position: relative;
+                margin-top: 0;
+                margin-bottom: 64px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 72px;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 24px;
+                color: #FFFFFF;
+                text-align: center;
+            }
+
+
+        .product__side--back {
+            padding: 70px 16px 52px;
+            transform: rotateY(180deg);
+        }
+            .product__side--back .product__image {
+                transform: rotateY(180deg);
+            }
+
+            .product__overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: rgb(0 74 129 / 80%);
+            }
+
+            .product__heading {
+                position: relative; /* выше .product__back::before */
+                margin-top: 0;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 24px;
+            }
+
+            .product__description {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative; /* выше .product__back::before */
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            .product__more {
+                position: relative; /* выше .product__back::before */
+                margin-top: 16px;
+                margin-left: auto;
+                margin-right: auto;
+                width: fit-content;
+                border: 1px solid currentColor;
+                border-radius: 3px;
+                padding: 7px 17px;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .product__more:hover {
+                background-color: rgb(255 255 255 / 20%);
+            }
+
+
+
+    .product__inner:hover .product__side--front {
+
+    }
+
+    .product__inner:hover .product__side--back {
+        transform: rotateY(180deg);
+    }
+
+
+
+@media (1850px <= width) {
+
+    .product {
+        /*pointer-events: auto;*/
+        /*display: block;*/
+        width: 394px;
+        height: 456px;
+        clip-path: path("M394 114L197 0L0 114V342L197 456L394 342V114Z");
+    }
+        .product__inner {
+            /*position: relative;*/
+            /*display: block;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*transform-style: preserve-3d;*/
+            /*transition: transform 1400ms var(--ease-out-quint);*/
+        }
+
+        .product:hover .product__inner {
+            /*transform: rotateY(180deg);*/
+        }
+            .product__preview {
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+            }
+                .product__image {
+                    /*vertical-align: top;*/
+                    /*width: 100%;*/
+                    /*height: 100%;*/
+                    /*object-fit: cover;*/
+                }
+
+                .product__preview::after {
+                    /*content: "";*/
+                    /*position: absolute;*/
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                    /*background-image: var(--hex-gradient);*/
+                    /*transition: opacity var(--transition-hover);*/
+                }
+
+            .product__side {
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*align-items: center;*/
+                /*color: #FFFFFF;*/
+                /*text-align: center;*/
+                /*backface-visibility: hidden;*/
+                clip-path: path("M394 114L197 0L0 114V342L197 456L394 342V114Z");
+            }
+
+            .product__side--front {
+                /*transform: rotateX(0deg);*/
+                /*justify-content: flex-end;*/
+            }
+                .product__front-heading {
+                    /*position: relative;*/
+                    /*margin-top: 0;*/
+                    margin-bottom: 80px;
+                    /*display: flex;*/
+                    /*flex-direction: column;*/
+                    /*justify-content: center;*/
+                    min-height: 93px;
+                    /*font-weight: bold;*/
+                    font-size: 22px;
+                    line-height: 28px;
+                    /*color: #FFFFFF;*/
+                    /*text-align: center;*/
+                }
+
+
+            .product__side--back {
+                padding: 90px 32px 72px;
+                /*transform: rotateY(180deg);*/
+            }
+                .product__side--back .product__image {
+                    /*transform: rotateY(180deg);*/
+                }
+
+                .product__overlay {
+                    /*position: absolute;*/
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                    /*display: block;*/
+                    /*background-color: rgb(0 74 129 / 80%);*/
+                }
+
+                .product__heading {
+                    /*position: relative; !* выше .product__back::before *!*/
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                    /*font-weight: bold;*/
+                    font-size: 22px;
+                    line-height: 27px;
+                }
+
+                .product__description {
+                    /*flex-grow: 1;*/
+                    /*display: flex;*/
+                    /*flex-direction: column;*/
+                    /*justify-content: center;*/
+                    /*position: relative; !* выше .product__back::before *!*/
+                    font-size: 17px;
+                    line-height: 22px;
+                }
+
+                .product__more {
+                    /*position: relative; !* выше .product__back::before *!*/
+                    /*margin-top: 16px;*/
+                    /*margin-left: auto;*/
+                    /*margin-right: auto;*/
+                    /*width: fit-content;*/
+                    /*border: 1px solid currentColor;*/
+                    /*border-radius: 3px;*/
+                    padding: 8px 20px;
+                    /*font-weight: bold;*/
+                    font-size: 17px;
+                    line-height: 22px;
+                }
+
+                .product__more:hover {
+                    /*background-color: rgb(255 255 255 / 20%);*/
+                }
+
+
+
+        .product__inner:hover .product__side--front {
+
+        }
+
+        .product__inner:hover .product__side--back {
+            /*transform: rotateY(180deg);*/
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .product {
+        /*pointer-events: auto;*/
+        /*display: block;*/
+        width: 278px;
+        height: 320px;
+        clip-path: path("M278 80L139 0L0.00543976 80L0 240L139 320L278 240V80Z");
+    }
+        .product__inner {
+            transform-style: unset;
+            transition: none;
+        }
+
+        .product:hover .product__inner {
+            transform: none;
+        }
+            .product__preview {
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+            }
+                .product__image {
+                    /*vertical-align: top;*/
+                    /*width: 100%;*/
+                    /*height: 100%;*/
+                    /*object-fit: cover;*/
+                }
+
+                .product__preview::after {
+                    /*content: "";*/
+                    /*position: absolute;*/
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                    /*background-image: var(--hex-gradient);*/
+                    /*transition: opacity var(--transition-hover);*/
+                }
+
+            .product__side {
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+                /*bottom: 0;*/
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*align-items: center;*/
+                /*color: #FFFFFF;*/
+                /*text-align: center;*/
+                /*backface-visibility: hidden;*/
+                clip-path: path("M278 80L139 0L0.00543976 80L0 240L139 320L278 240V80Z");
+            }
+
+            .product__side--front {
+                /*transform: rotateX(0deg);*/
+                /*justify-content: flex-end;*/
+            }
+                .product__front-heading {
+                    /*position: relative;*/
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 64px;*/
+                    /*display: flex;*/
+                    /*flex-direction: column;*/
+                    /*justify-content: center;*/
+                    /*min-height: 72px;*/
+                    /*font-weight: bold;*/
+                    /*font-size: 17px;*/
+                    /*line-height: 24px;*/
+                    /*color: #FFFFFF;*/
+                    /*text-align: center;*/
+                }
+
+
+            .product__side--back {
+                display: none;
+            }
+}
+
+
+

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="272" fill="none" viewBox="0 0 740 272">
+    <g clip-path="url(#clip0_2020_1865)">
+        <path fill="url(#paint0_linear_2020_1865)" d="M1212.52-225.449 370.325 54.356-472-225.45h1684.52Z"/>
+        <path stroke="#017BC8" stroke-miterlimit="10" stroke-width=".75" d="M1212.52-220.267 370.325 59.537-472-220.267h1684.52Z"/>
+        <path fill="url(#paint1_linear_2020_1865)" d="M1212.52-261.878 370.325 17.926-472-261.878h1684.52Z"/>
+        <path stroke="#017BC8" stroke-miterlimit="10" stroke-width=".75" d="M1212.52-256.077 370.325 23.728-472-256.077h1684.52Z"/>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_2020_1865" x1="370.269" x2="370.269" y1="-225.449" y2="54.361" gradientUnits="userSpaceOnUse">
+            <stop offset=".586" stop-color="#001C30" stop-opacity="0"/>
+            <stop offset="1" stop-color="#0068B2"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_2020_1865" x1="370.269" x2="370.269" y1="-261.878" y2="17.932" gradientUnits="userSpaceOnUse">
+            <stop offset=".586" stop-color="#001C30" stop-opacity="0"/>
+            <stop offset="1" stop-color="#0068B2"/>
+        </linearGradient>
+        <clipPath id="clip0_2020_1865">
+            <path fill="#fff" d="M0 0h740v272H0z"/>
+        </clipPath>
+    </defs>
+</svg>

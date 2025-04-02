@@ -1,0 +1,29 @@
+.thumbnail {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: filter var(--transition-hover);
+}
+
+.thumbnail:hover {
+    filter: brightness(110%) contrast(105%);
+}
+    .thumbnail__image {
+        vertical-align: top;
+        background-color: var(--image-fallback);
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+@media (width < 740px) {
+
+    .thumbnail__image {
+        aspect-ratio: 360 / 240;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}

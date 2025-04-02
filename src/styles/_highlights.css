@@ -1,0 +1,106 @@
+.highlights {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-color: #0273BC;
+    background-image: linear-gradient(#027BC8, #057CC8 31%, #012263);
+}
+    .highlights__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 38px;
+    }
+        .highlights__item {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .highlights__item:first-child {
+            margin-top: 0;
+        }
+            .highlights__icon {
+                flex-shrink: 0;
+            }
+
+            .highlights__label {
+                font-size: var(--body-font-size);
+                line-height: var(--body-line-height);
+                color: #FFFFFF;
+                text-align: center;
+            }
+
+            /* ширина текстов */
+            @media (740px <= width < 1850px) {
+
+                .highlights__item:first-child .highlights__label,
+                .highlights__item:last-child .highlights__label {
+                    max-width: 300px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+
+@media (1850px <= width) {
+
+    .highlights {
+        background-image: linear-gradient(#027BC8, #057CC8 40%, #005285);
+    }
+        .highlights__wrap {
+            gap: 0;
+        }
+            .highlights__item {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                gap: 0;
+            }
+
+            .highlights__item:first-child {
+
+            }
+                .highlights__icon {
+                    scale: 95%;
+                }
+
+                .highlights__label {
+                    margin-top: 46px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    text-align: left;
+                }
+}
+
+
+
+
+
+@media (width < 740px) {
+
+    .highlights {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+        .highlights__wrap {
+            display: block;
+        }
+            .highlights__item {
+
+            }
+
+            .highlights__item:first-child {
+
+            }
+                .highlights__icon {
+
+                }
+
+                .highlights__label {
+                    margin-top: -10px;
+                    max-width: 400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+}
