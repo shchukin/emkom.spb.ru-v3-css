@@ -552,4 +552,11 @@
         });
     });
 
+
+    new ScrollCarousel(".my-carousel", {
+        autoplay: true,
+        margin: 0
+    });
+
+
 })(jQuery);

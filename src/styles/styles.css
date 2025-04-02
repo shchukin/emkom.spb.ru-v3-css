@@ -2,6 +2,7 @@
 @import url("../vendors/normalize/normalize.css");
 @import url("../vendors/magnific-popup/magnific-popup.css");
 @import url("../vendors/swiper/swiper-bundle.min.css");
+@import url("../vendors/scroll-carousel/scroll.carousel.min.css");
 @import url("_box-sizing.css");
 @import url("_visuallyhidden.css");
 @import url("_root.css");
@@ -69,5 +70,6 @@
 @import url("_article.css");
 @import url("_title.css");
 @import url("_doc.css");
+@import url("_service-v3.css");
 
 
