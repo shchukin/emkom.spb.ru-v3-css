@@ -552,11 +552,16 @@
         });
     });
 
+    new Splide( '.splide', {
+        type   : 'loop',
+        drag   : 'free',
+        focus  : 'center',
+        perPage: 3,
+        autoScroll: {
+            speed: 1,
+        },
+    } ).mount( window.splide.Extensions );
 
-    new ScrollCarousel(".my-carousel", {
-        autoplay: true,
-        margin: 0
-    });
 
 
 })(jQuery);
