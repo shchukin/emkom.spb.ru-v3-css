@@ -578,10 +578,17 @@
         grid: {
             dimensions: generateGridPattern(slideCount),
             gap : {
-                row: '6px',
+                row: '9px',
             },
         },
         breakpoints: {
+            1820: {
+                grid: {
+                    gap : {
+                        row: '6px',
+                    },
+                },
+            },
             768: {
                 perPage: 1,
                 grid: false
