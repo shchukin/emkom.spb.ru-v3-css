@@ -569,12 +569,12 @@
     new Splide( '.splide', {
         type   : 'loop',
         drag   : 'free',
-        // focus  : 'center',
+        focus  : 'center',
         perPage: 5,
-        autoScroll: false,
-        // autoScroll: {
-        //     speed: 0.5,
-        // },
+        perMove: 3,
+        autoScroll: {
+            speed: 0.75,
+        },
         grid: {
             dimensions: generateGridPattern(slideCount),
             gap : {
@@ -583,6 +583,9 @@
         },
         breakpoints: {
             1820: {
+                autoScroll: {
+                    speed: 0.5,
+                },
                 grid: {
                     gap : {
                         row: '6px',
@@ -591,7 +594,8 @@
             },
             768: {
                 perPage: 1,
-                grid: false
+                autoScroll: false,
+                grid: false,
             },
         },
     } ).mount( window.splide.Extensions );

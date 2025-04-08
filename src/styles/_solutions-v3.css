@@ -72,7 +72,7 @@
         background-size: 1920px 831px, 100% 100%;
     }
         .solutions-v3__intro {
-            padding-top: 213px;
+            padding-top: 130px;
         }
             .solutions-v3__item {
                 top: 27px;
@@ -98,8 +98,9 @@
                     }
 
         .solutions-v3__description {
-            font-size: 16px;
-            line-height: 20px;
+            max-width: 1450px;
+            font-size: 20px;
+            line-height: 28px;
         }
 
 
