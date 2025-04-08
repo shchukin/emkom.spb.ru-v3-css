@@ -594,8 +594,10 @@
             },
             768: {
                 perPage: 1,
+                perMove: 1,
                 autoScroll: false,
                 grid: false,
+                snap: true
             },
         },
     } ).mount( window.splide.Extensions );

@@ -182,10 +182,7 @@
         }
 
         .solutions-v3__projects {
-            overflow: hidden; /* Обрезаем карусель */
-            background-color: var(--temno-siniy);
-            padding-top: 27px;
-            padding-bottom: 24px;
+
         }
 }
 

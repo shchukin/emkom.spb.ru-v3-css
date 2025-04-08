@@ -312,9 +312,6 @@
         .product__strut {
             /*pointer-events: auto;*/
             /*display: block;*/
-            width: 278px;
-            height: 320px;
-            clip-path: path("M278 80L139 0L0.00543976 80L0 240L139 320L278 240V80Z");
         }
             .product__inner {
                 transform-style: unset;
@@ -361,7 +358,6 @@
                     /*color: #FFFFFF;*/
                     /*text-align: center;*/
                     /*backface-visibility: hidden;*/
-                    clip-path: path("M278 80L139 0L0.00543976 80L0 240L139 320L278 240V80Z");
                 }
 
                 .product__side--front {
