@@ -552,13 +552,37 @@
         });
     });
 
+
+    const slideCount = document.querySelectorAll('.splide--service .splide__slide').length;
+
+
+    function generateGridPattern(count) {
+        const pattern = [[2, 1], [1, 1]];
+        const result = [];
+        for (let i = 0; i < count; i++) {
+            result.push(pattern[i % 2]); // Alternate between [2, 1] and [1, 1]
+        }
+        return result;
+    }
+
+
     new Splide( '.splide', {
-        type   : 'loop',
+        // type   : 'loop',
         drag   : 'free',
-        focus  : 'center',
-        perPage: 3,
-        autoScroll: {
-            speed: 1,
+        // focus  : 'center',
+        perPage: 5,
+        autoScroll: false,
+        // autoScroll: {
+        //     speed: 1,
+        // },
+        grid: {
+            dimensions: generateGridPattern(slideCount),
+        },
+        breakpoints: {
+            768: {
+                perPage: 1,
+                grid: false
+            },
         },
     } ).mount( window.splide.Extensions );
 
