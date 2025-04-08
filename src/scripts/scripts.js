@@ -567,18 +567,18 @@
 
 
     new Splide( '.splide', {
-        // type   : 'loop',
+        type   : 'loop',
         drag   : 'free',
         // focus  : 'center',
         perPage: 5,
         autoScroll: false,
         // autoScroll: {
-        //     speed: 1,
+        //     speed: 0.5,
         // },
         grid: {
             dimensions: generateGridPattern(slideCount),
             gap : {
-                row: '4px',
+                row: '7px',
             },
         },
         breakpoints: {

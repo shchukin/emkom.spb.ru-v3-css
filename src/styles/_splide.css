@@ -3,5 +3,15 @@
 }
 
 .splide--service .splide__list > .splide__slide:nth-child(even) .product {
-    margin-top: 138px;
+    /*margin-top: 138px;*/
+}
+
+.splide--service .splide__track {
+    overflow: visible;
+}
+
+.splide--service .splide__slide--col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

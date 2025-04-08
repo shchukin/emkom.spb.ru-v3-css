@@ -1,15 +1,15 @@
 .product {
     width: 240px;
-    height: 272px;
+    height: 268px;
 }
     .product__strut {
         pointer-events: auto;
         display: block;
-        margin-left: -38px;
-        margin-right: -38px;
-        width: 316px;
-        height: 272px;
-        clip-path: path("M237.5 0H78.5L0 136L78.5 272H237.5L316 136L237.5 0Z");
+        margin-left: -36px;
+        margin-right: -36px;
+        width: 312px;
+        height: 268px;
+        clip-path: path("M234.242 0H77.7579L0 134L77.7579 268H234.242L312 134L234.242 0Z");
     }
         .product__inner {
             position: relative;
@@ -60,7 +60,7 @@
                 color: #FFFFFF;
                 text-align: center;
                 backface-visibility: hidden;
-                clip-path: path("M237.5 0H78.5L0 136L78.5 272H237.5L316 136L237.5 0Z");
+                clip-path: path("M234.242 0H77.7579L0 134L77.7579 268H234.242L312 134L234.242 0Z");
             }
 
             .product__side--front {
@@ -84,7 +84,7 @@
 
 
             .product__side--back {
-                padding: 70px 16px 52px;
+                padding: 42px 24px 30px;
                 transform: rotateY(180deg);
             }
                 .product__side--back .product__image {
@@ -106,8 +106,8 @@
                     margin-top: 0;
                     margin-bottom: 0;
                     font-weight: bold;
-                    font-size: 17px;
-                    line-height: 24px;
+                    font-size: 14px;
+                    line-height: 18px;
                 }
 
                 .product__description {
@@ -116,13 +116,12 @@
                     flex-direction: column;
                     justify-content: center;
                     position: relative; /* выше .product__back::before */
-                    font-size: 15px;
-                    line-height: 20px;
+                    font-size: 12px;
+                    line-height: 16px;
                 }
 
                 .product__more {
                     position: relative; /* выше .product__back::before */
-                    margin-top: 16px;
                     margin-left: auto;
                     margin-right: auto;
                     width: fit-content;
