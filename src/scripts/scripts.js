@@ -578,7 +578,7 @@
         grid: {
             dimensions: generateGridPattern(slideCount),
             gap : {
-                row: '7px',
+                row: '6px',
             },
         },
         breakpoints: {

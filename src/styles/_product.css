@@ -5,11 +5,10 @@
     .product__strut {
         pointer-events: auto;
         display: block;
-        margin-left: -36px;
-        margin-right: -36px;
-        width: 312px;
-        height: 268px;
-        clip-path: path("M234.242 0H77.7579L0 134L77.7579 268H234.242L312 134L234.242 0Z");
+        margin: 3px -32px;
+        width: 304px;
+        height: 262px;
+        clip-path: path("M228.236 0H75.7641L0 131L75.7641 262H228.236L304 131L228.236 0Z");
     }
         .product__inner {
             position: relative;
@@ -60,7 +59,7 @@
                 color: #FFFFFF;
                 text-align: center;
                 backface-visibility: hidden;
-                clip-path: path("M234.242 0H77.7579L0 134L77.7579 268H234.242L312 134L234.242 0Z");
+                clip-path: path("M228.236 0H75.7641L0 131L75.7641 262H228.236L304 131L228.236 0Z");
             }
 
             .product__side--front {
