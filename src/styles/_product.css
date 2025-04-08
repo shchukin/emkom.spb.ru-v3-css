@@ -157,7 +157,7 @@
         .product__strut {
             /*pointer-events: auto;*/
             /*display: block;*/
-            /*margin: 3px -32px;*/
+            margin: 4px -45px;
             width: 424px;
             height: 366px;
             clip-path: path("M318.329 0H105.671L0 183L105.671 366H318.329L424 183L318.329 0Z");
@@ -221,21 +221,21 @@
                     .product__front-heading {
                         /*position: relative;*/
                         /*margin-top: 0;*/
-                        /*margin-bottom: 64px;*/
+                        margin-bottom: 92px;
                         /*display: flex;*/
                         /*flex-direction: column;*/
                         /*justify-content: center;*/
                         /*min-height: 72px;*/
                         /*font-weight: bold;*/
-                        /*font-size: 17px;*/
-                        /*line-height: 24px;*/
+                        font-size: 20px;
+                        line-height: 28px;
                         /*color: #FFFFFF;*/
                         /*text-align: center;*/
                     }
 
 
                 .product__side--back {
-                    /*padding: 42px 24px 30px;*/
+                    padding: 56px 32px 40px;
                     /*transform: rotateY(180deg);*/
                 }
                     .product__side--back .product__image {
@@ -257,8 +257,8 @@
                         /*margin-top: 0;*/
                         /*margin-bottom: 0;*/
                         /*font-weight: bold;*/
-                        /*font-size: 14px;*/
-                        /*line-height: 18px;*/
+                        font-size: 20px;
+                        line-height: 28px;
                     }
 
                     .product__description {
@@ -267,8 +267,8 @@
                         /*flex-direction: column;*/
                         /*justify-content: center;*/
                         /*position: relative; !* выше .product__back::before *!*/
-                        /*font-size: 12px;*/
-                        /*line-height: 16px;*/
+                        font-size: 16px;
+                        line-height: 22px;
                     }
 
                     .product__more {
@@ -278,10 +278,10 @@
                         /*width: fit-content;*/
                         /*border: 1px solid currentColor;*/
                         /*border-radius: 3px;*/
-                        /*padding: 7px 17px;*/
+                        padding: 10px 22px;
                         /*font-weight: bold;*/
-                        /*font-size: 16px;*/
-                        /*line-height: 20px;*/
+                        font-size: 18px;
+                        line-height: 22px;
                     }
 
                     .product__more:hover {
