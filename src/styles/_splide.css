@@ -39,6 +39,7 @@
 
     .splide--skin-service .splide__arrow[disabled] {
         opacity: 20%;
+        pointer-events: none;
     }
 
 
