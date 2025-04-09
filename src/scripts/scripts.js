@@ -608,6 +608,7 @@
 
 
     new Splide( '.splide--init-modular-solutions', {
+        type   : 'loop',
         drag   : 'free',
         focus  : 'center',
         pagination: false,

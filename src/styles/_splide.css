@@ -35,6 +35,10 @@
         cursor: pointer;
     }
 
+    .splide--skin-service .splide__arrow[disabled] {
+        opacity: 20%;
+    }
+
 
     .splide--skin-service .splide__arrow--prev {
         left: calc(-1 * (100vw - var(--container-width)) / 2 - var(--correction));
