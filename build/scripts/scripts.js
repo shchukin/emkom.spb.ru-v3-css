@@ -553,7 +553,7 @@
     });
 
 
-    const slideCount = document.querySelectorAll('.splide--service .splide__slide').length;
+    const slideCount = document.querySelectorAll('.splide--init-engineering-systems .splide__slide').length;
 
 
     function generateGridPattern(count) {
@@ -566,14 +566,17 @@
     }
 
 
-    new Splide( '.splide', {
+    new Splide( '.splide--init-engineering-systems', {
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
+        pagination: false,
         perPage: 5,
         perMove: 3,
         autoScroll: {
             speed: 0.75,
+            pauseOnHover: false,
+            pauseOnFocus: false
         },
         grid: {
             dimensions: generateGridPattern(slideCount),
@@ -592,7 +595,7 @@
                     },
                 },
             },
-            768: {
+            740: {
                 perPage: 1,
                 perMove: 1,
                 autoScroll: false,
@@ -602,6 +605,41 @@
         },
     } ).mount( window.splide.Extensions );
 
+
+
+    new Splide( '.splide--init-modular-solutions', {
+
+        breakpoints: {
+            740: {
+                drag   : 'free',
+                focus  : 'center',
+                pagination: false,
+                perPage: 1,
+                perMove: 1,
+            },
+        },
+    } );
+
+
+    $('.solutions-v3__link').on('click', function () {
+
+        const $this = $(this);
+
+        if( ! $this.hasClass('solutions-v3__link--current') ) {
+
+            $('.solutions-v3__link--current').removeClass('solutions-v3__link--current');
+            $('.solutions-v3__tab--current').removeClass('solutions-v3__tab--current');
+
+            if( $this.hasClass('solutions-v3__link--engineering-systems') ) {
+                $('.solutions-v3__link--engineering-systems').addClass('solutions-v3__link--current');
+                $('.solutions-v3__tab--engineering-systems').addClass('solutions-v3__tab--current');
+            }
+            if( $this.hasClass('solutions-v3__link--modular-solutions') ) {
+                $('.solutions-v3__link--modular-solutions').addClass('solutions-v3__link--current');
+                $('.solutions-v3__tab--modular-solutions').addClass('solutions-v3__tab--current');
+            }
+        }
+    });
 
 
 })(jQuery);
