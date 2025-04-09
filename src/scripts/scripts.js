@@ -553,8 +553,9 @@
     });
 
 
-    const slideCount = document.querySelectorAll('.splide--init-engineering-systems .splide__slide').length;
 
+    /* Слайдеры на странице услуг третьей версии */
+    const slideCount = document.querySelectorAll('.splide--init-engineering-systems .splide__slide').length;
 
     function generateGridPattern(count) {
         const pattern = [[2, 1], [1, 1]];
@@ -611,7 +612,6 @@
     } ).mount( window.splide.Extensions );
 
 
-
     new Splide( '.splide--init-modular-solutions', {
         type   : 'loop',
         drag   : 'free',
@@ -622,6 +622,8 @@
     } ).mount();
 
 
+    /* Табы на странице услуг третьй версии */
+    
     $('.solutions-v3__link').on('click', function () {
 
         const $this = $(this);
