@@ -1,7 +1,21 @@
 .splide--service {
-
+    --correction: 0px;
 }
-    .splide--service .splide__list > .splide__slide:nth-child(even) .product {
+
+
+@media (1850px <= width) {
+    .splide--service {
+        --correction: 4px; /* 5 плиток в слайдере = 1670px, а контейне 1678px */
+    }
+}
+
+
+.splide--service {
+    margin-left: var(--correction);
+    margin-right: var(--correction);
+}
+
+.splide--service .splide__list > .splide__slide:nth-child(even) .product {
         /*margin-top: 138px;*/
     }
 
@@ -26,17 +40,24 @@
 
     .splide--service .splide__arrow {
         position: absolute;
+        z-index: 10;
         top: 0;
         bottom: 0;
         width: 100px;
+        margin: 0;
         background-color: red;
+        border: none;
+        padding: 0;
     }
 
 
     .splide--service .splide__arrow--prev {
-        left: 0;
+        left: calc(-1 * (100vw - 1200px) / 2 - var(--correction));
     }
 
     .splide--service .splide__arrow--next {
-        right: 0;
+        right: calc(-1 * (100vw - 1200px) / 2 - var(--correction));
     }
+
+
+

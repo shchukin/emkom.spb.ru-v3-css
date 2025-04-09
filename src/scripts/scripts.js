@@ -570,6 +570,7 @@
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
+        pagination: false,
         perPage: 5,
         perMove: 3,
         autoScroll: {
