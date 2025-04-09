@@ -567,14 +567,16 @@
 
 
     new Splide( '.splide--init-engineering-systems', {
-        // type   : 'loop',
         drag   : 'free',
         focus  : 'center',
         pagination: false,
         perPage: 5,
-        // perMove: 3, ← В оригинале
         perMove: 5,
         autoScroll: false,
+
+        // В оригинале была бесконечная карусель:
+        // type: 'loop',
+        // perMove: 3,
         // autoScroll: {
         //     speed: 0.75,
         //     pauseOnHover: false,
@@ -588,6 +590,7 @@
         },
         breakpoints: {
             1820: {
+                // В оригинале была бесконечная карусель:
                 // autoScroll: {
                 //     speed: 0.5,
                 // },
