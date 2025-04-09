@@ -1,6 +1,8 @@
+/* stylelint-disable */
 .splide--skin-service {
     --correction: 0px;
 }
+/* stylelint-enable */
 
 .splide--skin-service {
     margin-left: var(--correction);
@@ -245,7 +247,7 @@
 
 
 @media (1850px <= width) {
-    
+
     .splide--init-modular-solutions {
         height: 757px;
     }
