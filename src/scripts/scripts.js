@@ -553,7 +553,7 @@
     });
 
 
-    const slideCount = document.querySelectorAll('.splide--service .splide__slide').length;
+    const slideCount = document.querySelectorAll('.splide--init-engineering-systems .splide__slide').length;
 
 
     function generateGridPattern(count) {
@@ -566,7 +566,7 @@
     }
 
 
-    new Splide( '.splide', {
+    new Splide( '.splide--init-engineering-systems', {
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
@@ -595,7 +595,7 @@
                     },
                 },
             },
-            768: {
+            740: {
                 perPage: 1,
                 perMove: 1,
                 autoScroll: false,
@@ -604,6 +604,21 @@
             },
         },
     } ).mount( window.splide.Extensions );
+
+
+
+    new Splide( '.splide--init-modular-solutions', {
+
+        breakpoints: {
+            740: {
+                drag   : 'free',
+                focus  : 'center',
+                pagination: false,
+                perPage: 1,
+                perMove: 1,
+            },
+        },
+    } );
 
 
     $('.solutions-v3__link').on('click', function () {
