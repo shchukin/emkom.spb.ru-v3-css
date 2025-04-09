@@ -567,17 +567,19 @@
 
 
     new Splide( '.splide--init-engineering-systems', {
-        type   : 'loop',
+        // type   : 'loop',
         drag   : 'free',
         focus  : 'center',
         pagination: false,
         perPage: 5,
-        perMove: 3,
-        autoScroll: {
-            speed: 0.75,
-            pauseOnHover: false,
-            pauseOnFocus: false
-        },
+        // perMove: 3, ← В оригинале
+        perMove: 5,
+        autoScroll: false,
+        // autoScroll: {
+        //     speed: 0.75,
+        //     pauseOnHover: false,
+        //     pauseOnFocus: false
+        // },
         grid: {
             dimensions: generateGridPattern(slideCount),
             gap : {
@@ -586,9 +588,9 @@
         },
         breakpoints: {
             1820: {
-                autoScroll: {
-                    speed: 0.5,
-                },
+                // autoScroll: {
+                //     speed: 0.5,
+                // },
                 grid: {
                     gap : {
                         row: '6px',
@@ -608,17 +610,13 @@
 
 
     new Splide( '.splide--init-modular-solutions', {
-
-        breakpoints: {
-            740: {
-                drag   : 'free',
-                focus  : 'center',
-                pagination: false,
-                perPage: 1,
-                perMove: 1,
-            },
-        },
-    } );
+        type   : 'loop',
+        drag   : 'free',
+        focus  : 'center',
+        pagination: false,
+        perPage: 1,
+        perMove: 1,
+    } ).mount();
 
 
     $('.solutions-v3__link').on('click', function () {
