@@ -575,6 +575,8 @@
         perMove: 3,
         autoScroll: {
             speed: 0.75,
+            pauseOnHover: false,
+            pauseOnFocus: false
         },
         grid: {
             dimensions: generateGridPattern(slideCount),

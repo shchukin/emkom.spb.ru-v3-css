@@ -6,6 +6,7 @@
     --transition-hover: 100ms ease;
     /*--transition-show: 1200ms var(--ease-out-quint);*/
     --image-fallback: var(--siniy1);
+    --container-width: 1200px;
     --container-padding: 24px;
 
     --input-border: #B3B3B3;
@@ -33,6 +34,7 @@
 
 @media (1850px <= width) {
     :root {
+        --container-width: 1678px;
         --container-padding: 60px;
         --top-padding: 30px;
         --body-font-size: 18px;

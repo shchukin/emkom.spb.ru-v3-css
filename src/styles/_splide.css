@@ -2,21 +2,13 @@
     --correction: 0px;
 }
 
-
-@media (1850px <= width) {
-    .splide--service {
-        --correction: 4px; /* 5 плиток в слайдере = 1670px, а контейне 1678px */
-    }
-}
-
-
 .splide--service {
     margin-left: var(--correction);
     margin-right: var(--correction);
 }
 
-.splide--service .splide__list > .splide__slide:nth-child(even) .product {
-        /*margin-top: 138px;*/
+    .splide--service .splide__list > .splide__slide:nth-child(even) .product {
+
     }
 
     .splide--service .splide__track {
@@ -29,14 +21,6 @@
         justify-content: center;
     }
 
-    @media (width < 740px) {
-        .splide--service .splide__slide {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-
 
     .splide--service .splide__arrow {
         position: absolute;
@@ -45,19 +29,188 @@
         bottom: 0;
         width: 100px;
         margin: 0;
-        background-color: red;
         border: none;
+        background-color: transparent;
         padding: 0;
+        cursor: pointer;
     }
 
 
     .splide--service .splide__arrow--prev {
-        left: calc(-1 * (100vw - 1200px) / 2 - var(--correction));
+        left: calc(-1 * (100vw - var(--container-width)) / 2 - var(--correction));
+        background-image: linear-gradient(to right, rgb(3 72 116 / 100%), rgb(3 72 116 / 0%));
     }
 
     .splide--service .splide__arrow--next {
-        right: calc(-1 * (100vw - 1200px) / 2 - var(--correction));
+        right: calc(-1 * (100vw - var(--container-width)) / 2 - var(--correction));
+        background-image: linear-gradient(to left, rgb(3 72 116 / 100%), rgb(3 72 116 / 0%));
     }
+        /* hover */
+        .splide--service .splide__arrow::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border-radius: 10px;
+        }
+
+        .splide--service .splide__arrow:hover::before {
+            background-color: rgb(255 255 255 / 20%);
+        }
+
+        .splide--service .splide__arrow svg {
+            position: relative;
+            fill: #FFFFFF;
+        }
+
+        .splide--service .splide__arrow--prev svg {
+            transform: scaleX(-1);
+        }
+
+
+
+
+@media (1850px <= width) {
+
+    .splide--service {
+        --correction: 4px; /* 5 плиток в слайдере = 1670px, а контейне 1678px */
+    }
+
+
+    .splide--service {
+
+    }
+
+    .splide--service .splide__list > .splide__slide:nth-child(even) .product {
+
+        }
+
+        .splide--service .splide__track {
+
+        }
+
+        .splide--service .splide__slide--col {
+
+        }
+
+        .splide--service .splide__arrow {
+            width: 130px;
+        }
+
+
+        .splide--service .splide__arrow--prev {
+
+        }
+
+        .splide--service .splide__arrow--next {
+
+        }
+            /* hover */
+            .splide--service .splide__arrow::before {
+                inset: 13px;
+                border-radius: 13px;
+            }
+
+            .splide--service .splide__arrow:hover::before {
+
+            }
+
+            .splide--service .splide__arrow svg {
+
+            }
+
+            .splide--service .splide__arrow--prev svg {
+
+            }
+}
+
+
+
+
+
+@media (width < 740px) {
+
+    .splide--service {
+        /*--correction: 0px;*/
+    }
+
+    .splide--service {
+        /*margin-left: var(--correction);*/
+        /*margin-right: var(--correction);*/
+    }
+
+        .splide--service .splide__list > .splide__slide:nth-child(even) .product {
+
+        }
+
+        .splide--service .splide__track {
+            /*overflow: visible;*/
+        }
+
+        .splide--service .splide__slide--col {
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*justify-content: center;*/
+        }
+            .splide--service .splide__slide {
+                display: flex;
+                justify-content: center;
+            }
+
+
+
+        .splide--service .splide__arrow {
+            /*position: absolute;*/
+            /*z-index: 10;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            width: 40px;
+            /*margin: 0;*/
+            /*border: none;*/
+            /*background-color: transparent;*/
+            /*padding: 0;*/
+            /*cursor: pointer;*/
+        }
+
+
+        .splide--service .splide__arrow--prev {
+            left: calc(-1 * var(--container-padding) + 2px);
+            background-image: none;
+        }
+
+        .splide--service .splide__arrow--next {
+            right: calc(-1 * var(--container-padding) + 2px);
+            background-image: none;
+        }
+
+
+        @media (width < 350px) {
+            .splide--service .splide__arrow {
+                display: none;
+            }
+        }
+
+            /* hover */
+            .splide--service .splide__arrow::before {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*inset: 10px;*/
+                /*border-radius: 10px;*/
+                display: none;
+            }
+
+            .splide--service .splide__arrow:hover::before {
+                /*background-color: rgb(255 255 255 / 20%);*/
+            }
+
+            .splide--service .splide__arrow svg {
+                /*position: relative;*/
+                /*fill: #FFFFFF;*/
+            }
+
+            .splide--service .splide__arrow--prev svg {
+                /*transform: scaleX(-1);*/
+            }
+}
 
 
 
