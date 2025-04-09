@@ -1,5 +1,6 @@
 .index {
     position: relative;
+    min-height: 100%;
     background-color: #00578C;
     background-image: url("../vectors/intro-laptop.svg"), var(--radial-gradient);
     background-size: 1280px 661px, 100% 100%;

@@ -1,4 +1,5 @@
 .solutions-v3 {
+    min-height: 100%;
     position: relative;
     background-color: #00578C;
     background-image: url("../vectors/intro-laptop.svg"), var(--radial-gradient);
