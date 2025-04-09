@@ -603,5 +603,25 @@
     } ).mount( window.splide.Extensions );
 
 
+    $('.solutions-v3__link').on('click', function () {
+
+        const $this = $(this);
+
+        if( ! $this.hasClass('solutions-v3__link--current') ) {
+
+            $('.solutions-v3__link--current').removeClass('solutions-v3__link--current');
+            $('.solutions-v3__tab--current').removeClass('solutions-v3__tab--current');
+
+            if( $this.hasClass('solutions-v3__link--engineering-systems') ) {
+                $('.solutions-v3__link--engineering-systems').addClass('solutions-v3__link--current');
+                $('.solutions-v3__tab--engineering-systems').addClass('solutions-v3__tab--current');
+            }
+            if( $this.hasClass('solutions-v3__link--modular-solutions') ) {
+                $('.solutions-v3__link--modular-solutions').addClass('solutions-v3__link--current');
+                $('.solutions-v3__tab--modular-solutions').addClass('solutions-v3__tab--current');
+            }
+        }
+    });
+
 
 })(jQuery);

@@ -1,24 +1,42 @@
 .splide--service {
 
 }
+    .splide--service .splide__list > .splide__slide:nth-child(even) .product {
+        /*margin-top: 138px;*/
+    }
 
-.splide--service .splide__list > .splide__slide:nth-child(even) .product {
-    /*margin-top: 138px;*/
-}
+    .splide--service .splide__track {
+        overflow: visible;
+    }
 
-.splide--service .splide__track {
-    overflow: visible;
-}
-
-.splide--service .splide__slide--col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-@media (width < 740px) {
-    .splide--service .splide__slide {
+    .splide--service .splide__slide--col {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
-}
+
+    @media (width < 740px) {
+        .splide--service .splide__slide {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+
+
+    .splide--service .splide__arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        background-color: red;
+    }
+
+
+    .splide--service .splide__arrow--prev {
+        left: 0;
+    }
+
+    .splide--service .splide__arrow--next {
+        right: 0;
+    }
