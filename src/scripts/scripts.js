@@ -608,17 +608,12 @@
 
 
     new Splide( '.splide--init-modular-solutions', {
-
-        breakpoints: {
-            740: {
-                drag   : 'free',
-                focus  : 'center',
-                pagination: false,
-                perPage: 1,
-                perMove: 1,
-            },
-        },
-    } );
+        drag   : 'free',
+        focus  : 'center',
+        pagination: false,
+        perPage: 1,
+        perMove: 1,
+    } ).mount();
 
 
     $('.solutions-v3__link').on('click', function () {
