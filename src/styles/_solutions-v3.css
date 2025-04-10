@@ -10,104 +10,39 @@
     overflow: hidden; /* Обрезаем карусель */
 }
     .solutions-v3__wrap {
-
+        padding-top: 30px;
     }
-        .solutions-v3__intro {
-            position: relative;
-            padding-top: 79px;
+        .solutions-v3__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: inherit;
+            text-align: center;
+            text-decoration: 1.5px underline transparent;
+            text-underline-offset: 4px;
+            transition: text-decoration-color var(--transition-hover);
+            cursor: pointer;
         }
-            .solutions-v3__link {
-                position: absolute;
-                top: 15px;
-                background-color: transparent;
-                border: none;
-                padding: 0;
-                font-family: inherit;
-                font-weight: 500;
-                font-size: 22px;
-                line-height: 27px;
-                text-transform: uppercase;
-                color: inherit;
-                text-decoration: 1.5px underline transparent;
-                text-underline-offset: 4px;
-                transition: text-decoration-color var(--transition-hover);
-                cursor: pointer;
-            }
-
-            .solutions-v3__link:hover {
-                text-decoration-color: inherit;
-            }
-
-            .solutions-v3__link--engineering-systems {
-                left: 0;
-                right: calc(50% + 113px);
-                text-align: right;
-            }
-
-            .solutions-v3__link--modular-solutions {
-                left: calc(50% + 113px);
-                right: 0;
-                text-align: left;
-            }
-
-            .solutions-v3__link--current {
-                cursor: default;
-            }
-                .solutions-v3__link::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 50%;
-                    margin-top: -8px;
-                    width: 22px;
-                    height: 16px;
-                    background-image: url("../vectors/arrow.svg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    opacity: 0;
-                    transition: opacity 100ms ease;
-                }
-
-                .solutions-v3__link--engineering-systems::before {
-                    right: -44px;
-                    transform: scaleX(-1);
-                }
-
-                .solutions-v3__link--modular-solutions::before {
-                    left: -44px;
-                }
-
-                .solutions-v3__link--current::before {
-                    opacity: 100%;
-                }
-
 
         .solutions-v3__description {
-            margin: 0 auto;
-            max-width: 1000px;
+            margin: 20px auto 0;
+            max-width: 670px;
             font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
+            font-size: 18px;
+            line-height: 22px;
             text-align: center;
         }
 
         .solutions-v3__projects {
-            margin-top: 20px;
+            margin-top: 26px;
+            padding-bottom: 40px;
             position: relative;
-            height: 542px;
         }
-            .solutions-v3__tab {
-                opacity: 0;
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-            }
-
-            .solutions-v3__tab--current {
-                opacity: 100%;
-            }
 
 
 @media (1850px <= width) {
@@ -116,60 +51,22 @@
         background-image: url("../vectors/intro-monitor.svg"), var(--radial-gradient);
         background-size: 1920px 831px, 100% 100%;
     }
-        .solutions-v3__intro {
-            padding-top: 130px;
+        .solutions-v3__wrap {
+            padding-top: 40px;
         }
-            .solutions-v3__link {
-                top: 27px;
+            .solutions-v3__heading {
                 font-size: 34px;
                 line-height: 41px;
             }
 
-            .solutions-v3__link--engineering-systems {
-                right: calc(50% + 169px);
+            .solutions-v3__description {
+                max-width: 900px;
+                font-size: 24px;
+                line-height: 32px;
             }
-
-            .solutions-v3__link--modular-solutions {
-                left: calc(50% + 169px);
-            }
-                    .solutions-v3__link::before {
-                        /*content: "";*/
-                        /*display: block;*/
-                        /*position: absolute;*/
-                        /*top: 50%;*/
-                        margin-top: -12px;
-                        width: 33px;
-                        height: 24px;
-                        /*background-image: url("../vectors/arrow.svg");*/
-                        /*background-size: contain;*/
-                        /*background-repeat: no-repeat;*/
-                        /*background-position: center center;*/
-                        /*opacity: 0;*/
-                        /*transition: opacity 100ms ease;*/
-                    }
-
-                    .solutions-v3__link--engineering-systems::before {
-                        right: -66px;
-                        /*transform: scaleX(-1);*/
-                    }
-
-                    .solutions-v3__link--modular-solutions::before {
-                        left: -66px;
-                    }
-
-                    .solutions-v3__link--current::before {
-                        /*opacity: 100%;*/
-                    }
-
-        .solutions-v3__description {
-            max-width: 1450px;
-            font-size: 20px;
-            line-height: 28px;
-        }
-
 
         .solutions-v3__projects {
-            height: 757px;
+
         }
 }
 
