@@ -78,13 +78,10 @@
         background-image: url("../vectors/intro-smartphone.svg"), linear-gradient(#003C62, #017BC8 69%, #027BC8);
         background-size: 740px 272px, 100% 100%;
     }
-        .solutions-v3__intro {
-            /*position: relative;*/
-            padding-top: 69px;
-            padding-bottom: 29px;
+        .solutions-v3__wrap {
+
         }
-            .solutions-v3__link {
-                position: static;
+            .solutions-v3__heading {
                 max-width: 360px;
                 margin-left: auto;
                 margin-right: auto;
@@ -92,53 +89,17 @@
                 line-height: 25px;
             }
 
-            .solutions-v3__link--engineering-systems {
-                text-align: left;
+            .solutions-v3__description {
+                /*margin-top: 10px;*/
+                /*font-weight: 500;*/
+                max-width: 400px;
+                font-size: 15px;
+                line-height: 20px;
             }
 
-            .solutions-v3__link--modular-solutions {
-                margin-top: 25px;
+            .solutions-v3__projects {
+
             }
-                    .solutions-v3__link {
-                        display: flex;
-                        align-items: flex-start;
-                    }
-
-                    .solutions-v3__link:hover {
-                        /*text-decoration-color: inherit;*/
-                    }
-                        .solutions-v3__link br {
-                            display: none;
-                        }
-
-                        .solutions-v3__link::before {
-                            position: static;
-                            /*content: "";*/
-                            flex-shrink: 0;
-                            /*display: block;*/
-                            margin-right: 8px;
-                            margin-left: -1px;
-                            margin-top: 5px;
-                            width: 23px;
-                            height: 16px;
-                            background-image: url("../vectors/arrow-7.svg");
-                            /*background-size: contain;*/
-                            /*background-repeat: no-repeat;*/
-                            /*background-position: center center;*/
-                            transform: none;
-                        }
-
-        .solutions-v3__description {
-            display: none;
-            /*margin-top: 10px;*/
-            /*font-weight: 500;*/
-            /*font-size: 14px;*/
-            /*line-height: 17px;*/
-        }
-
-        .solutions-v3__projects {
-            height: 268px;
-        }
 }
 
 
