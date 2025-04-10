@@ -54,7 +54,7 @@
     }
 
 
-    @media (740px <= width < 1260px ) {
+    @media (740px <= width < 1260px) {
 
         .splide--skin-service .splide__arrow--prev {
             left: calc(-1 * var(--container-padding) - var(--correction));
