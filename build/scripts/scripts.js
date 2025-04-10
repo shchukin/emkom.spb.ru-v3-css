@@ -567,60 +567,68 @@
     }
 
 
-    new Splide( '.splide--init-engineering-systems', {
-        drag   : 'free',
-        focus  : 'center',
-        pagination: false,
-        perPage: 5,
-        perMove: 5,
-        autoScroll: false,
+    const $splideInitEngineeringSystems = document.querySelector('.splide--init-engineering-systems');
 
-        // В оригинале была бесконечная карусель:
-        // type: 'loop',
-        // perMove: 3,
-        // autoScroll: {
-        //     speed: 0.75,
-        //     pauseOnHover: false,
-        //     pauseOnFocus: false
-        // },
-        grid: {
-            dimensions: generateGridPattern(slideCount),
-            gap : {
-                row: '9px',
-            },
-        },
-        breakpoints: {
-            1820: {
-                // В оригинале была бесконечная карусель:
-                // autoScroll: {
-                //     speed: 0.5,
-                // },
-                grid: {
-                    gap : {
-                        row: '6px',
-                    },
+    if( $splideInitEngineeringSystems ) {
+        new Splide($splideInitEngineeringSystems, {
+            drag: 'free',
+            focus: 'center',
+            pagination: false,
+            perPage: 5,
+            perMove: 5,
+            autoScroll: false,
+
+            // В оригинале была бесконечная карусель:
+            // type: 'loop',
+            // perMove: 3,
+            // autoScroll: {
+            //     speed: 0.75,
+            //     pauseOnHover: false,
+            //     pauseOnFocus: false
+            // },
+            grid: {
+                dimensions: generateGridPattern(slideCount),
+                gap: {
+                    row: '9px',
                 },
             },
-            740: {
+            breakpoints: {
+                1820: {
+                    // В оригинале была бесконечная карусель:
+                    // autoScroll: {
+                    //     speed: 0.5,
+                    // },
+                    grid: {
+                        gap: {
+                            row: '6px',
+                        },
+                    },
+                },
+                740: {
+                    perPage: 1,
+                    perMove: 1,
+                    autoScroll: false,
+                    grid: false,
+                    snap: true
+                },
+            },
+        }).mount(window.splide.Extensions);
+    }
+
+
+    const splideInitModularSolutions = document.querySelector('.splide--init-modular-solutions');
+
+    if(!isDesktop) {
+        if(splideInitModularSolutions) {
+            new Splide( splideInitModularSolutions, {
+                drag   : 'free',
+                focus  : 'center',
+                pagination: false,
                 perPage: 1,
                 perMove: 1,
-                autoScroll: false,
-                grid: false,
-                snap: true
-            },
-        },
-    } ).mount( window.splide.Extensions );
-
-
-    new Splide( '.splide--init-modular-solutions', {
-        type   : 'loop',
-        drag   : 'free',
-        focus  : 'center',
-        pagination: false,
-        perPage: 1,
-        perMove: 1,
-    } ).mount();
-
+            } ).mount();
+        }
+    }
 
     /* Табы на странице услуг третьй версии */
     
